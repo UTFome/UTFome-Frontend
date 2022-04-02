@@ -1,3 +1,32 @@
-.imagem-home{
-    color: red;
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background:url("https://via.placeholder.com/150") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 60rem;
+}
+
+.home .content h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color:#ffd900;
+}
+
+.home .content p{
+    font-size: 2rem;
+    line-height: 1.8;
+    padding:1rem 0;
+    color: black;
+    text-transform: none;
+}
+.botao-entrar{
+    background-color: #ffd900;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    width: 30%;
 }
