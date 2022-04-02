@@ -2,9 +2,11 @@ import './Home.css';
 
 
 function Home(){
-    <div className="imagem-home">
-        oi oi 
-    </div>
+    return (
+        <div className="imagem-home">
+            oi oi 
+        </div>
+    )
 
 }
 
