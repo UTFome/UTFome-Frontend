@@ -13,12 +13,11 @@ function Header(){
                 <nav className='navbar'>
                     <a href='#home'>home</a>
                     <a href='#produtos'>produtos</a>
+                    <a href='#anunciar'>anunciar</a>
                     <a href='#sobre'>sobre</a>
                     <a href='#contato'>contato</a>
                     <a href='#conta'>conta</a>
                 </nav>
-
-                
 
             </header>
         </Router>
