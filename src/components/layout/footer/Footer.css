@@ -1,5 +1,5 @@
 .footer{
-    background:var(--black);
+    background: #FACB18;
     text-align: center;
 }
 
@@ -12,14 +12,15 @@
     width: 5rem;
     line-height: 5rem;
     font-size: 2rem;
-    color:#fff;
+    color:#513538;
     border:var(--border);
     margin:.3rem;
     border-radius: 50%;
 }
 
 .footer .share a:hover{
-    background-color: var(--main-color);
+    background-color: #513538;
+    color: #fff;
 }
 
 .footer .links{
@@ -32,22 +33,28 @@
 
 .footer .links a{
     padding:.7rem 2rem;
-    color:#fff;
+    color: #513538;
     border:var(--border);
     font-size: 2rem;
+    text-decoration: none !important;
 }
 
 .footer .links a:hover{
-    background:var(--main-color);
+    background: #513538;
+    color: #fff;
 }
 
 .footer .credit{
     font-size: 2rem;
-    color:#fff;
+    color:#513538;
     font-weight: lighter;
     padding:1.5rem;
 }
 
 .footer .credit span{
-    color:var(--main-color);
+    color: #513538;
+}
+
+.footer img{
+    width: 12%;
 }
