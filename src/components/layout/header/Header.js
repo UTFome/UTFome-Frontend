@@ -8,13 +8,14 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { FaBars } from 'react-icons/fa';
 
 function Header(){
-    let navbar = document.querySelector('.navbar');
-
-    document.querySelector('#menu-btn').onclick = () =>{
+    
+    function toggleNavbar(){
+        let navbar = document.querySelector('.navbar');
         navbar.classList.toggle('active');
     }
-
+    
     window.onscroll = () =>{
+        let navbar = document.querySelector('.navbar');
         navbar.classList.remove('active');
     }
 
@@ -36,13 +37,12 @@ function Header(){
                 </nav>
 
                 <div className='icons'>
-                    <div id='menu-btn'>
+                    <div id='menu-btn' onClick={toggleNavbar}>
                         <FaBars />
                     </div>
                 </div>
 
             </header>
-
         </Router>
     );
 }
