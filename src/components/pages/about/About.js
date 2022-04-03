@@ -6,10 +6,13 @@ import thaynara from '../../../assets/images/about-thaynara.jpeg';
 import reginaldo from '../../../assets/images/about-reginaldo.jpg';
 import breno from '../../../assets/images/about-breno.jpg';
 import marcos from '../../../assets/images/about-marcos.jpg';
+import Header from '../../layout/header/Header';
+import Footer from '../../layout/footer/Footer';
 
 function About(){
     return (
-        <>
+        <>  
+            <Header />
             <section className="about" id="about">
                 <h1 className="heading"> <span>about</span> us </h1>
 
@@ -68,6 +71,7 @@ function About(){
                 </div>
 
             </section>
+            <Footer />
         </>
     );
 }
