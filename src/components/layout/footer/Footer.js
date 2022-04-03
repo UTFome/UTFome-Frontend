@@ -1,44 +1,42 @@
+import Bee from "../../../assets/images/bee_grande.png";
 import "./Footer.css";
-import {  FaFacebookF,  FaTwitter,  FaInstagram,  FaLinkedin,  FaPinterest,} from "react-icons/fa";
-import Bee from "../../../assets/images/bee_pequeno.png";
 
 function Footer() {
   return (
     <section className="footer">
-      <div className="col-md-6">
-        <div>Info Info Info Info</div>
-        <div>Info Info Info Info</div>
-      </div>
-
-      <div className="col-md-6">
-        <div className="links">
-          <a href="#">home</a>
-          <a href="#">about</a>
-          <a href="#">menu</a>
-          <a href="#">products</a>
-          <a href="#">review</a>
-          <a href="#">conta</a>
-          <a href="#">blogs</a>
+      <div class="row">
+        <div class="col-externa">
+            {/* Conteúdo Futuro */}
         </div>
-      </div>
-      <img className="logo-bee" src={Bee} alt="Bee" />
 
-      <div className="share">
-        <a href="#">
-          <FaFacebookF className="icone-facebook" />
-        </a>
-        <a href="#">
-          <FaTwitter className="icone-twitter" />
-        </a>
-        <a href="#">
-          <FaInstagram className="icone-instagram" />
-        </a>
-        <a href="#">
-          <FaLinkedin className="icone-linkedin" />
-        </a>
-        <a href="#">
-          <FaPinterest className="icone-pinterest" />
-        </a>
+        <div class="col-interna">
+          <img src={Bee} />
+          <div className="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+            <a href="#" class="fab fa-pinterest"></a>
+          </div>
+          <div className="links">
+            <a href="#">home</a>
+            <a href="#">sobre</a>
+            <a href="#">menu</a>
+            <a href="#">produtos</a>
+            <a href="#">avaliações</a>
+          </div>
+        </div>
+
+        <div class="col-externa">
+          {/* <div className="footer-suportes">
+              Suporte
+          </div>
+
+          <div className="footer-suporte">
+              <div>FAQs</div>
+              <div>Entrar em contato</div>
+          </div> */}
+        </div>
       </div>
 
       <div className="credit">
