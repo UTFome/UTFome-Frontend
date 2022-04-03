@@ -1,8 +1,25 @@
 import './Header.css';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import logo from '../../../assets/images/Logo_grande.png';
 
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+
+
+import { FaBars } from 'react-icons/fa';
+
 function Header(){
+
+
+    function openMenu(){
+        let navbar = document.querySelector('.navbar');
+        navbar.classList.toggle('active');
+    }
+    
+    window.onscroll = () =>{
+        let navbar = document.querySelector('.navbar');
+        navbar.classList.remove('active');
+    }
+
     return (
         <Router>
             <header className='header'>
@@ -20,7 +37,14 @@ function Header(){
                     <a href='#conta'>conta</a>
                 </nav>
 
+                <div className='icons'>
+                    <div id='menu-btn' onClick={openMenu}>
+                        <FaBars />
+                    </div>
+                </div>
+
             </header>
+
         </Router>
     );
 }
