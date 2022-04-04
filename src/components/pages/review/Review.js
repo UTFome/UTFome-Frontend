@@ -10,9 +10,9 @@ function Review() {
 
 <div className="box-container">
     <div className="box">
-        <img className="review-aspas" src={Aspas}></img>
+        <img src={Aspas} />
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus vel? Nemo.</p>
-        <img className="review-pessoa" src={Bee}></img>
+        <img src={Bee} />
         <h3>Pessoa 1</h3>
         <div className="stars">
             <i className="fas fa-star"></i>
@@ -23,9 +23,9 @@ function Review() {
         </div>
     </div>
     <div className="box">
-        <img className="review-aspas" src={Aspas}></img>
+        <img src={Aspas} />
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus vel? Nemo.</p>
-        <img className="review-pessoa" src={Bee}></img>
+        <img src={Bee} />
         <h3>Pessoa 2</h3>
         <div className="stars">
             <i className="fas fa-star"></i>
@@ -36,9 +36,9 @@ function Review() {
         </div>
     </div>
     <div className="box">
-        <img className="review-aspas" src={Aspas}></img>
+        <img src={Aspas} />
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus vel? Nemo.</p>
-        <img className="review-pessoa" src={Bee}></img>
+        <img src={Bee} />
         <h3>Pessoa 3</h3>
         <div className="stars">
             <i className="fas fa-star"></i>
