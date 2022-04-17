@@ -5,14 +5,24 @@ import Review from './componentes/pages/review/Review';
 import Home from './componentes/pages/home/Home';
 import Contact from './componentes/pages/contact/Contact';
 import Produto from './componentes/components/produto/Produto';
+import React from 'react';
 
 function App() {
-  return (
-    <div className="App">
-      <p>Hello World</p>
-      <About />
-    </div>
-  );
+
+	const [data, setData] = React.useState(null);
+
+	React.useEffect(() => {
+		fetch("/api")
+		.then((res) => res.json())
+		.then((data) => setData(data.message));
+	}, []);
+
+	return (
+		<div className="App">
+    		<p>Hello World</p>
+			<p>{!data ? "Loading..." : data}</p>
+		</div>
+	);
 }
 
 export default App;
