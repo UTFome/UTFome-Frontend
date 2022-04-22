@@ -1,16 +1,24 @@
 import React from 'react';
 import './Login.css';
 import logo from '../../../assets/images/Logo_grande.png';
+import { useState } from 'react';
 
 const Login = () => {
-    const [email, setEmail] = React.useState('');
-    const [password, setPassword] = React.useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("Submitted", { email, password });
+    }
 
     return (
         <div className='container'>
             <div className='container-login'>
                 <div className='wrap-login'>
-                    <form className='login-form'>
+                    <form 
+                    className='login-form' 
+                    onSubmit={handleSubmit}>
                         <span className='login-form-title'>
                             Bem Vindo!
                         </span>
