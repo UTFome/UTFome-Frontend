@@ -3,43 +3,43 @@ import Bee from "../../../assets/images/background_home_pequeno.png";
 
 function Produto() {
     return(
-        <section class="blogs" id="blogs">
-            <h1 class="heading"> Produtos <span>Disponíveis</span> </h1>
+        <section className="blogs" id="blogs">
+            <h1 className="heading"> Produtos <span>Disponíveis</span> </h1>
         
-            <div class="box-container">
-                <div class="box">
-                    <div class="image">
+            <div className="box-container">
+                <div className="box">
+                    <div className="image">
                         <img src={Bee} />
                     </div>
-                    <div class="content">
-                        <a href="#" class="title">Brigadeiro</a>
+                    <div className="content">
+                        <a href="#" className="title">Brigadeiro</a>
                         <span>Localização: Em frente ao Bloco X</span>
                         <p>Brigadeiro muito gostoso</p>
-                        <a href="#" class="btn">tenho interesse</a>
+                        <a href="#" className="btn">tenho interesse</a>
                     </div>
                 </div>
 
-                <div class="box">
-                    <div class="image">
+                <div className="box">
+                    <div className="image">
                         <img src={Bee} />
                     </div>
-                    <div class="content">
-                        <a href="#" class="title">Brownie</a>
+                    <div className="content">
+                        <a href="#" className="title">Brownie</a>
                         <span>Localização: Em frente ao Bloco X</span>
                         <p>Brownie muito gostoso</p>
-                        <a href="#" class="btn">tenho interesse</a>
+                        <a href="#" className="btn">tenho interesse</a>
                     </div>
                 </div>
 
-                <div class="box">
-                    <div class="image">
+                <div className="box">
+                    <div className="image">
                         <img src={Bee} />
                     </div>
-                    <div class="content">
-                        <a href="#" class="title">Bolo</a>
+                    <div className="content">
+                        <a href="#" className="title">Bolo</a>
                         <span>Localização: Em frente ao Bloco X</span>
                         <p>Bolo muito gostoso</p>
-                        <a href="#" class="btn">tenho interesse</a>
+                        <a href="#" className="btn">tenho interesse</a>
                     </div>
                 </div>
 

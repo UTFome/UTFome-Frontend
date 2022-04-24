@@ -1,10 +1,6 @@
 import './Header.css';
 import logo from '../../../assets/images/Logo_grande.png';
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
-
-
 import { FaBars } from 'react-icons/fa';
 
 function Header(){
@@ -21,7 +17,6 @@ function Header(){
     }
 
     return (
-        <Router>
             <header className='header'>
 
                 <a href='#' className='logo'>
@@ -45,7 +40,6 @@ function Header(){
 
             </header>
 
-        </Router>
     );
 }
 

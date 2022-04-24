@@ -1,15 +1,19 @@
 import React from 'react';
 import './Login.css';
 import logo from '../../../assets/images/Logo_grande.png';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { AuthContext } from '../../../contexts/auth';
 
 const Login = () => {
+    const { authenticated, login } = useContext(AuthContext);
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("Submitted", { email, password });
+        login(email, password);
     }
 
     return (
@@ -22,6 +26,7 @@ const Login = () => {
                         <span className='login-form-title'>
                             Bem Vindo!
                         </span>
+                        <p>{String(authenticated)}</p>
 
                         <span className='login-form-title'>
                             <img src={logo}></img>
