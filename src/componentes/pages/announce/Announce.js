@@ -6,8 +6,6 @@ import './Announce.css';
 function Announce(){
     return (
         <>
-            <Header />
-
             <h1>ANUNCIAR PRODUTOS</h1>
             <h1>ANUNCIAR PRODUTOS</h1>
             <h1>ANUNCIAR PRODUTOS</h1>
@@ -20,8 +18,6 @@ function Announce(){
             <h1>ANUNCIAR PRODUTOS</h1>
             <h1>ANUNCIAR PRODUTOS</h1>
             <h1>ANUNCIAR PRODUTOS</h1>
-
-            <Footer />
         </>
     )
 }

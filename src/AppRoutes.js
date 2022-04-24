@@ -5,7 +5,7 @@ import {
     Navigate,
 } from 'react-router-dom';
 
-import React from 'react';
+import React, { useContext } from 'react';
 
 import Footer from './componentes/layout/footer/Footer';
 import Header from './componentes/layout/header/Header';
@@ -16,18 +16,44 @@ import Contact from './componentes/pages/contact/Contact';
 import Produto from './componentes/components/produto/Produto';
 import Login from './componentes/pages/login/Login';
 import Announce from './componentes/pages/announce/Announce';
+import Profile from './componentes/pages/profile/Profile';
 
-import { AuthProvider } from './contexts/auth';
+import { AuthProvider, AuthContext } from './contexts/auth';
 
 const AppRoutes = () => {
-    
+    const Private = ({ children }) => {
+        const { authenticated, loading } = useContext(AuthContext);
+
+        if (loading) {
+            return <div>Carregando...</div>
+        }
+
+        if (!authenticated) {
+            return (
+                <Navigate to="/login" />
+            );
+        }
+
+        return children;
+    }
 
     return(
         <Router>
             <AuthProvider>
                 <Routes>
 
-                    <Route exact path="/anunciar" element={<Announce />} />
+                    <Route exact path="/anunciar" element={
+                        <Private>
+                            <Announce />
+                        </Private>
+                    } />
+
+                    <Route exact path="/perfil" element={
+                        <Private>
+                            <Profile />
+                        </Private>
+                    } />
+
                     <Route exact path="/contato" element={<Contact />} />
                     <Route exact path="/review" element={<Review />} />
                     <Route exact path="/sobre" element={<About />} />
