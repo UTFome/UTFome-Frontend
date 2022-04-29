@@ -19,6 +19,7 @@ import Announce from './componentes/pages/announce/Announce';
 import Profile from './componentes/pages/profile/Profile';
 
 import { AuthProvider, AuthContext } from './contexts/auth';
+import Register from './componentes/pages/register/Register';
 
 const AppRoutes = () => {
     const Private = ({ children }) => {
@@ -37,11 +38,28 @@ const AppRoutes = () => {
         return children;
     }
 
+    const PrivateForNoAuth = ({ children }) => {
+        const { authenticated, loading } = useContext(AuthContext);
+
+        if (loading) {
+            return <div>Carregando...</div>
+        }
+
+        if (authenticated) {
+            return (
+                <Navigate to="/perfil" />
+            );
+        }
+
+        return children;
+    }
+
     return(
         <Router>
             <AuthProvider>
                 <Routes>
 
+                    {/* ##### APENAS USUARIOS AUTENTICADOS PODEM ACESSAR #####*/}
                     <Route exact path="/anunciar" element={
                         <Private>
                             <Announce />
@@ -54,11 +72,34 @@ const AppRoutes = () => {
                         </Private>
                     } />
 
+
+
+
+                    {/* ##### APENAS USUARIOS NAO AUTENTICADOS PODEM ACESSAR #####*/}
+                    <Route exact path="/login" element={
+                        <PrivateForNoAuth>
+                            <Login />
+                        </PrivateForNoAuth>
+                
+                    } />
+
+                    <Route exact path="/register" element={
+                        <PrivateForNoAuth>
+                            <Register />
+                        </PrivateForNoAuth>
+                    } />
+
+
+
+
+                    {/* ############### ROTAS GERAIS ###############*/}
                     <Route exact path="/contato" element={<Contact />} />
                     <Route exact path="/review" element={<Review />} />
                     <Route exact path="/sobre" element={<About />} />
-                    <Route exact path="/login" element={<Login />} />
                     <Route exact path="/" element={<Home />} />
+                    {/* <Route exact path="/main" element={<Main />} /> */}
+
+
                 </Routes>
             </AuthProvider>
         </Router>

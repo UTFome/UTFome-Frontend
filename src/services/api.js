@@ -9,6 +9,8 @@ export const sayHello = async() => {
     console.log(response.data);
 }
 
+
+// ############### SESSIONS ###############
 export const createSession = async (email, senha) => {
     try{
         const response = api.post('/sessoes', {
@@ -18,5 +20,20 @@ export const createSession = async (email, senha) => {
         return response;
     }catch(err){
         console.log("Erro ao criar sessão");
+    }
+}
+
+// ############### USERS ###############
+export const createUser = async (nome, sobrenome, email, senha) => {
+    try{
+        const response = api.post('/usuarios', {
+            nome,
+            sobrenome,
+            email,
+            senha
+        });
+        return response;
+    }catch(err){
+        console.log("Erro ao criar usuário");
     }
 }
