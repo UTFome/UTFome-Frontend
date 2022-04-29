@@ -25,6 +25,9 @@ function Profile(){
             <h1>PERFIL</h1>
             <h1>PERFIL</h1>
             <h1>PERFIL</h1>
+            <h1>PERFIL</h1>
+            <h1>PERFIL</h1>
+            
         </>
     )
 }

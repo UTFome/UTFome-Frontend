@@ -2,7 +2,7 @@ import React, { createContext, useState, useEffect } from 'react';
 
 import { useNavigate } from 'react-router-dom';
 
-import {api, createSession} from '../services/api';
+import {api, createSession, sayHello} from '../services/api';
 
 export const AuthContext = createContext();
 
@@ -23,11 +23,11 @@ export const AuthProvider = ({children}) => {
     }, []);
 
     const login = async (email, senha) => {
-
+        await sayHello();
         const response = await createSession(email, senha);
-        console.log(response.data);
+        //console.log(response.data);
 
-        const loggedUser = response.data.user;
+        const loggedUser = response.data.usuario;
         const token = response.data.token;
 
         localStorage.setItem("user", JSON.stringify(loggedUser));

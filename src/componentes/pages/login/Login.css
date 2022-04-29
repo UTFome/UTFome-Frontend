@@ -65,6 +65,7 @@
     height: 45px;
 
     background-color: transparent;
+    text-transform: lowercase;
 
     padding: 0 5px;
 }
