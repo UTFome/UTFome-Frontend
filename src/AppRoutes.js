@@ -97,7 +97,9 @@ const AppRoutes = () => {
                     <Route exact path="/review" element={<Review />} />
                     <Route exact path="/sobre" element={<About />} />
                     <Route exact path="/" element={<Home />} />
-                    
+                    {/* <Route exact path="/main" element={<Main />} /> */}
+
+
                 </Routes>
             </AuthProvider>
         </Router>
