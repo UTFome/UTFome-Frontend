@@ -1,19 +1,21 @@
 import React from 'react';
-import './Login.css';
+import './Register.css';
 import logo from '../../../assets/images/Logo_grande.png';
 import { useState, useContext } from 'react';
 import { AuthContext } from '../../../contexts/auth';
 
-const Login = () => {
-    const { authenticated, login } = useContext(AuthContext);
+const Register = () => {
+    const { register } = useContext(AuthContext);
 
+    const [name, setName] = useState('');
+    const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Submitted", { email, password });
-        login(email, password);
+        console.log("Submitted", { name, lastName, email, password });
+        register(name, lastName, email, password);
     }
 
     return (
@@ -30,6 +32,24 @@ const Login = () => {
                         <span className='login-form-title'>
                             <img src={logo}></img>
                         </span>
+
+                        <div className='wrap-input'>
+                            <input 
+                            className={name !== '' ? 'has-val input' : 'input'}
+                            type="text"
+                            value={name}
+                            onChange={e => setName(e.target.value)} />
+                            <span className='focus-input' data-placeholder="Nome"></span>
+                        </div>
+
+                        <div className='wrap-input'>
+                            <input
+                            className={lastName !== '' ? 'has-val input' : 'input'}
+                            type="text"
+                            value={lastName}
+                            onChange={e => setLastName(e.target.value)} />
+                            <span className='focus-input' data-placeholder="Sobrenome"></span>
+                        </div>
 
                         <div className='wrap-input'>
                             <input 
@@ -51,7 +71,7 @@ const Login = () => {
 
                         <div className='container-login-form-btn'>
                             <button className='login-form-btn'>
-                                Login
+                                Registrar
                             </button>
                         </div>
 
@@ -71,4 +91,4 @@ const Login = () => {
     )
 }
 
-export default Login;
+export default Register;
