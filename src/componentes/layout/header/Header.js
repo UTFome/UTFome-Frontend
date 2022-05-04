@@ -6,15 +6,10 @@ import { useContext } from 'react';
 import { AuthContext } from '../../../contexts/auth';
 
 function Header(){
-<<<<<<< HEAD:src/components/layout/header/Header.js
-    
-    function toggleNavbar(){
-=======
 
     const { authenticated } = useContext(AuthContext);
 
     function openMenu(){
->>>>>>> 426371a2d6ef902f323c3d18f05ea328d9213421:src/componentes/layout/header/Header.js
         let navbar = document.querySelector('.navbar');
         navbar.classList.toggle('active');
     }
@@ -41,21 +36,13 @@ function Header(){
                 </nav>
 
                 <div className='icons'>
-<<<<<<< HEAD:src/components/layout/header/Header.js
-                    <div id='menu-btn' onClick={toggleNavbar}>
-=======
                     <div id='menu-btn' onClick={openMenu}>
->>>>>>> 426371a2d6ef902f323c3d18f05ea328d9213421:src/componentes/layout/header/Header.js
                         <FaBars />
                     </div>
                 </div>
 
             </header>
-<<<<<<< HEAD:src/components/layout/header/Header.js
-        </Router>
-=======
 
->>>>>>> 426371a2d6ef902f323c3d18f05ea328d9213421:src/componentes/layout/header/Header.js
     );
 }
 
