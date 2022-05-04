@@ -20,10 +20,11 @@ import Profile from './componentes/pages/profile/Profile';
 
 import { AuthProvider, AuthContext } from './contexts/auth';
 import Register from './componentes/pages/register/Register';
+import Main from './componentes/pages/main/main';
 
 const AppRoutes = () => {
 
-    
+
     const Private = ({ children }) => {
         const { authenticated, loading } = useContext(AuthContext);
 
@@ -98,6 +99,7 @@ const AppRoutes = () => {
                     <Route exact path="/contato" element={<Contact />} />
                     <Route exact path="/review" element={<Review />} />
                     <Route exact path="/sobre" element={<About />} />
+                    <Route exact path="/main" element={<Main />} />
                     <Route exact path="/" element={<Home />} />
                     {/* <Route exact path="/main" element={<Main />} /> */}
 
