@@ -21,14 +21,10 @@ const Register = () => {
     return (
         <div className='container'>
             <div className='container-login'>
-                <div className='wrap-login'>
+                <div className='wrap-register'>
                     <form 
                     className='login-form' 
                     onSubmit={handleSubmit}>
-                        <span className='login-form-title'>
-                            Bem Vindo!
-                        </span>
-
                         <span className='login-form-title'>
                             <img src={logo}></img>
                         </span>

@@ -23,11 +23,7 @@ const Login = () => {
                     <form 
                     className='login-form' 
                     onSubmit={handleSubmit}>
-                        <span className='login-form-title'>
-                            Bem Vindo!
-                        </span>
                         {/* <p>{String(authenticated)}</p> */}
-
                         <span className='login-form-title'>
                             <img src={logo}></img>
                         </span>
