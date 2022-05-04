@@ -17,13 +17,14 @@
     background-color: #111;
 }
 
-.wrap-login{
-    width: 600px;
+.wrap-register{
+    width: 40%;
+    height: 95vh;
     background-color: #333;
     border-radius: 10px;
 
     overflow: hidden;
-    padding: 77px 55px 33px 55px;
+    padding: 5% 3% 3%;
 
     box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
 }
@@ -150,7 +151,7 @@
     font-size: 15px;
     border: none;
     border-radius: 10px;
-    color: #fff;
+    color: #503739;
 
     line-height: 1.2;
 
@@ -169,6 +170,10 @@
 
 .login-form-btn:hover{
     cursor: pointer;
+    background-color: #503739;
+    color: #fff;
+    /* background : url(../../../assets/images/hover_botao.png); */
+    /* mask-repeat: no-repeat; */
 }
 
 .text-center{
@@ -187,10 +192,15 @@
 
     text-decoration: none;
 }
+
 .txt2{
     font-size: 14px;
     color: #c7c41a;
     line-height: 1.5;
 
     text-decoration: none;
+}
+
+.txt2:hover{
+    color: #fff;
 }
