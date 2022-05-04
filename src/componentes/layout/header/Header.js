@@ -4,6 +4,7 @@ import logo from '../../../assets/images/Logo_grande.png';
 import { FaBars } from 'react-icons/fa';
 import { useContext } from 'react';
 import { AuthContext } from '../../../contexts/auth';
+import { Link } from 'react-router-dom';
 
 function Header(){
 
@@ -27,12 +28,12 @@ function Header(){
                 </a>
 
                 <nav className='navbar'>
-                    <a href='#home'>home</a>
-                    <a href='#produtos'>produtos</a>
-                    <a href='#anunciar'>anunciar</a>
-                    <a href='#sobre'>sobre</a>
-                    <a href='#contato'>contato</a>
-                    <a href='#conta'>perfil</a>
+                    <Link to="/main">HOME</Link>
+                    <Link to="/produtos">PRODUTOS</Link>
+                    <a href='#anunciar'>ANUNCIAR</a>
+                    <Link to="/sobre">SOBRE</Link>
+                    <Link to="/contato">CONTATO</Link>
+                    <Link to="/perfil">PERFIL</Link>
                 </nav>
 
                 <div className='icons'>

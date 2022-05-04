@@ -67,17 +67,17 @@ const Register = () => {
 
                         <div className='container-login-form-btn'>
                             <button className='login-form-btn'>
-                                Registrar
+                                Cadastre-se
                             </button>
                         </div>
 
                         <div className='text-center'>
                             <span className='txt1'>
-                                Nao possui conta?
+                                Já possui uma conta?
                             </span>
 
                             <a href='#' className='txt2'>
-                                Criar conta
+                                Faça login
                             </a>
                         </div>
                     </form>

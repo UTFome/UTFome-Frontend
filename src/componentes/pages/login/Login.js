@@ -54,7 +54,7 @@ const Login = () => {
 
                         <div className='text-center'>
                             <span className='txt1'>
-                                Nao possui conta?
+                                Não possui conta?
                             </span>
 
                             <a href='#' className='txt2'>
