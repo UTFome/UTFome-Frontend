@@ -35,10 +35,6 @@
     color:var(--main-color);
 }
 
-.review-aspas {
+.review .box img {
     width: 15%;
-}
-
-.review-pessoa {
-    width: 20%;
 }
