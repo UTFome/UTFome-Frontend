@@ -18,7 +18,7 @@
 }
 
 .wrap-register{
-    width: 25%;
+    width: 40%;
     height: 95vh;
     background-color: #333;
     border-radius: 10px;
@@ -152,7 +152,6 @@
     border: none;
     border-radius: 10px;
     color: #503739;
-    margin-top: 5%;
 
     line-height: 1.2;
 
@@ -205,28 +204,3 @@
 .txt2:hover{
     color: #fff;
 }
-
-.share {
-        padding: 70px 0 35px 0;
-        position: absolute;
-        left: 50%;
-        bottom: -1.8%; 
-        transform: translate(-50%, -50%);
-    }
-
-    .share a {
-        height: 4.5rem;
-        width: 4.5rem;
-        line-height: 4.5rem;
-        font-size: 1.8rem;
-        text-align: center;
-        color: #fff; /* #513538; */
-        border: 1px solid #503739;
-        margin: 0.5rem;
-        border-radius: 50%;
-    }
-
-    .share a:hover {
-        background-color: #facb18;
-        color: #513538;
-    }
