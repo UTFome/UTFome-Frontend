@@ -73,13 +73,22 @@ const Register = () => {
 
                         <div className='text-center'>
                             <span className='txt1'>
-                                Nao possui conta?
+                                Já possui sua conta?
                             </span>
 
                             <a href='#' className='txt2'>
-                                Criar conta
+                                Faça login
                             </a>
                         </div>
+
+                        <div className="share">
+                            <a href="#" className="fab fa-facebook-f"></a>
+                            <a href="#" className="fab fa-twitter"></a>
+                            <a href="#" className="fab fa-instagram"></a>
+                            <a href="#" className="fab fa-linkedin"></a>
+                            <a href="#" className="fab fa-pinterest"></a>
+                        </div>
+
                     </form>
                 </div>
             </div>
