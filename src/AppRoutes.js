@@ -22,6 +22,8 @@ import { AuthProvider, AuthContext } from './contexts/auth';
 import Register from './componentes/pages/register/Register';
 
 const AppRoutes = () => {
+
+    
     const Private = ({ children }) => {
         const { authenticated, loading } = useContext(AuthContext);
 
