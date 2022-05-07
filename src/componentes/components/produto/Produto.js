@@ -1,51 +1,40 @@
 import "./Produto.css";
+import { listProducts } from "../../../services/api.js";
+import React, { useEffect, useState } from "react";
+
 import Bee from "../../../assets/images/background_home_pequeno.png";
 
+
 function Produto() {
+    const [products, setVal] = useState();
+
+    const getProducts = async () => {
+        const { data } = await listProducts();
+        console.log(data)
+        setVal(data);
+    };
+
+    const renderProduct = (product) => {
+        return <div className="box-container">
+            <div className="box" key="{product.id}">
+                <div className="image"> <img src={Bee} /> </div>
+                <div className="content">
+                    <a href="#" className="title">{product.nome}</a>
+                    <span>Localização: Em frente ao Bloco X</span>
+                    <p>{product.descricao}</p>
+                    <a href="#" className="btn">tenho interesse</a>
+                </div>
+            </div>
+        </div>
+    };
+
+    useEffect(() => { getProducts() }, []);    
+
     return(
         <section className="blogs" id="blogs">
-            <h1 className="heading"> Produtos <span>Disponíveis</span> </h1>
-        
-            <div className="box-container">
-                <div className="box">
-                    <div className="image">
-                        <img src={Bee} />
-                    </div>
-                    <div className="content">
-                        <a href="#" className="title">Brigadeiro</a>
-                        <span>Localização: Em frente ao Bloco X</span>
-                        <p>Brigadeiro muito gostoso</p>
-                        <a href="#" className="btn">tenho interesse</a>
-                    </div>
-                </div>
+            <h1 className="heading"> Produtos <span>Disponíveis</span> </h1>         
 
-                <div className="box">
-                    <div className="image">
-                        <img src={Bee} />
-                    </div>
-                    <div className="content">
-                        <a href="#" className="title">Brownie</a>
-                        <span>Localização: Em frente ao Bloco X</span>
-                        <p>Brownie muito gostoso</p>
-                        <a href="#" className="btn">tenho interesse</a>
-                    </div>
-                </div>
-
-                <div className="box">
-                    <div className="image">
-                        <img src={Bee} />
-                    </div>
-                    <div className="content">
-                        <a href="#" className="title">Bolo</a>
-                        <span>Localização: Em frente ao Bloco X</span>
-                        <p>Bolo muito gostoso</p>
-                        <a href="#" className="btn">tenho interesse</a>
-                    </div>
-                </div>
-
-
-            </div>
-
+            { products.map(renderProduct) }
         </section>
     );
 }
