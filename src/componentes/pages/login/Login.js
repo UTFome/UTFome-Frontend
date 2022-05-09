@@ -3,7 +3,7 @@ import './Login.css';
 import logo from '../../../assets/images/Logo_grande.png';
 import { useState, useContext } from 'react';
 import { AuthContext } from '../../../contexts/auth';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     const { authenticated, login } = useContext(AuthContext);
@@ -26,7 +26,9 @@ const Login = () => {
                     onSubmit={handleSubmit}>
                         {/* <p>{String(authenticated)}</p> */}
                         <span className='login-form-title'>
-                            <img src={logo}></img>
+                            <Link to="/main">
+                                <img src={logo}></img>
+                            </Link>
                         </span>
 
                         <div className='wrap-input'>
@@ -70,12 +72,9 @@ const Login = () => {
                             <span className='txt1'>
                                 Não possui conta?
                             </span>
-
-                            <a href='#' className='txt2'>
-                                <li>
-                                    <Link to="/register">Criar conta</Link>
-                                </li>
-                            </a>
+                            <Link to = "/register" className='txt2'>
+                                Criar conta
+                            </Link>                        
                         </div>
                     </form>
                 </div>
