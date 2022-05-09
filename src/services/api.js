@@ -9,7 +9,6 @@ export const sayHello = async() => {
     console.log(response.data);
 }
 
-
 // ############### SESSIONS ###############
 export const createSession = async (email, senha) => {
     try{
