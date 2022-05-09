@@ -3,6 +3,7 @@ import './Register.css';
 import logo from '../../../assets/images/Logo_grande.png';
 import { useState, useContext } from 'react';
 import { AuthContext } from '../../../contexts/auth';
+import {Link} from 'react-router-dom';
 
 const Register = () => {
     const { register } = useContext(AuthContext);
@@ -77,7 +78,7 @@ const Register = () => {
                             </span>
 
                             <a href='#' className='txt2'>
-                                Faça login
+                                <Link to="/login">Faça login</Link>
                             </a>
                         </div>
                     </form>
