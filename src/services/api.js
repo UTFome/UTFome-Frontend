@@ -37,3 +37,18 @@ export const createUser = async (nome, sobrenome, email, senha) => {
         console.log("Erro ao criar usuário");
     }
 }
+
+// ############### PRODUCTS ###############
+export const listProducts = async () => {
+    try{
+        const accessToken = localStorage.getItem("token");
+        console.log(`the token: ${accessToken}`)
+        return api.get('/produtos', {
+            headers: {
+              'Authorization': `token ${accessToken}`
+            }
+          });
+    }catch(err){
+        console.error("Erro ao listar produtos: ", err);
+    }
+}
