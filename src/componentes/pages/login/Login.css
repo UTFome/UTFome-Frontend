@@ -171,6 +171,44 @@
     cursor: pointer;
 }
 
+a:hover 
+{ 
+    cursor: pointer;
+    font-size: 14px;
+    color: #c7c41a;
+    line-height: 1.5;
+    transition: 0.5s;
+}
+
+a{
+    font-size: 14px;
+    color: #adadad;
+    line-height: 1.5;
+    padding-right: 5px;
+    text-decoration: none;
+}
+
+.forgotPassword-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 50px;
+}
+
+.forgotPassword{
+    font-size: 14px;
+    color: #adadad;
+    line-height: 1.5;
+    padding-right: 5px;
+}
+
+.recoverAccount-text{
+    font-size: 14px;
+    color: #c7c41a;
+    line-height: 1.5;
+}
+
 .text-center{
     display: flex;
     align-items: center;
@@ -179,18 +217,20 @@
     margin-top: 50px;
 }
 
+li:marker{
+    text-decoration: none !important;
+}
+
 .txt1{
     font-size: 14px;
     color: #adadad;
     line-height: 1.5;
     padding-right: 5px;
-
-    text-decoration: none;
 }
+
+
 .txt2{
     font-size: 14px;
     color: #c7c41a;
     line-height: 1.5;
-
-    text-decoration: none;
 }

@@ -55,6 +55,19 @@ const Login = () => {
                             </button>
                         </div>
 
+                        <div className='forgotPassword-text'>
+                            <span className='forgotPassword'>
+                                Esqueceu sua senha?
+                            </span>
+
+                            <a href='#' className='recoverAccount-text'>
+                                <li>
+                                    <Link to="/register">Recuperar Conta </Link> 
+                                    {/* Alterar para onde redireciona. Colocar página do "Forgot Password" */}
+                                </li>
+                            </a>
+                        </div>
+
                         <div className='text-center'>
                             <span className='txt1'>
                                 Não possui conta?

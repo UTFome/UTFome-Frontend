@@ -19,14 +19,12 @@ function Profile(){
     return (
         <>
             <p>{String(authenticated)}</p>
-            <button onClick={handleLogout}>LOOOOOOOGOUT</button>
-            <h1>PERFIL</h1>
-            <h1>PERFIL</h1>
-            <h1>PERFIL</h1>
-            <h1>PERFIL</h1>
-            <h1>PERFIL</h1>
-            <h1>PERFIL</h1>
-            <h1>PERFIL</h1>
+            <h1>USUÁRIO BEE</h1>
+            <h2>HOME</h2>
+            <h2>PERFIL</h2>
+            <h2>PRODUTOS</h2>
+            <h2>CONFIGURAÇÕES</h2>
+            <button className='logout-botao' onClick={handleLogout}>LOGOUT</button>
             
         </>
     )
