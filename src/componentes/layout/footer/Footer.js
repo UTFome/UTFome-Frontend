@@ -17,14 +17,7 @@ function Footer() {
             <a href="#" className="fab fa-instagram"></a>
             <a href="#" className="fab fa-linkedin"></a>
             <a href="#" className="fab fa-pinterest"></a>
-          </div>
-          <div className="links">
-            <a href="#">home</a>
-            <a href="#">sobre</a>
-            <a href="#">menu</a>
-            <a href="#">produtos</a>
-            <a href="#">avaliações</a>
-          </div>
+          </div>         
         </div>
 
         <div className="col-externa">

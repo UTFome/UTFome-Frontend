@@ -101,6 +101,9 @@ const AppRoutes = () => {
                     <Route exact path="/sobre" element={<About />} />
                     <Route exact path="/main" element={<Main />} />
                     <Route exact path="/" element={<Home />} />
+                    <Route exact path="/register" element={<Register />} />
+                    <Route exact path="/login" element={<Login />} />
+                    <Route exact path="/anunciar" element={<Announce />} />
                     {/* <Route exact path="/main" element={<Main />} /> */}
 
 
