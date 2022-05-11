@@ -73,7 +73,7 @@
 }
 
 .wrap-input.error .errorMessage{
-    color: red;
+    color: rgb(245, 105, 105);
     font-size: smaller;
     visibility: visible;
 }

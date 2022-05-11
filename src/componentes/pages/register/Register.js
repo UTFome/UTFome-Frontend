@@ -28,8 +28,8 @@ const Register = () => {
                         <span className='login-form-title'>
                             <img src={logo}></img>
                         </span>
-
-                        <div className='wrap-input sucess'>
+                
+                        <div className='wrap-input'>
                             <input
                                 className={name !== '' ? 'has-val input' : 'input'}
                                 type="text"
@@ -41,7 +41,7 @@ const Register = () => {
                             <small class = "errorMessage">Mensagem de erro</small>
                         </div>
 
-                        <div className='wrap-input error'>
+                        <div className='wrap-input'>
                             <input
                                 className={lastName !== '' ? 'has-val input' : 'input'}
                                 type="text"
@@ -72,6 +72,18 @@ const Register = () => {
                                 value={password}
                                 onChange={e => setPassword(e.target.value)} />
                             <span className='focus-input' data-placeholder="Senha"></span>
+                            <i class="fas fa-check-circle iconeVerdadeiro"></i>
+                            <i class="fas fa-exclamation-circle iconeFalso"></i>
+                            <small class = "errorMessage">Mensagem de erro</small>
+                        </div>
+
+                        <div className='wrap-input'>
+                            <input
+                                className={password !== '' ? 'has-val input' : 'input'}
+                                type="confirmPassword"
+                                value={password}
+                                onChange={e => setPassword(e.target.value)} />
+                            <span className='focus-input' data-placeholder="Confirme sua senha"></span>
                             <i class="fas fa-check-circle iconeVerdadeiro"></i>
                             <i class="fas fa-exclamation-circle iconeFalso"></i>
                             <small class = "errorMessage">Mensagem de erro</small>
