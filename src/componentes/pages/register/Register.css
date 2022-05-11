@@ -47,16 +47,40 @@
     width: 100px;
 }
 
-.wrap-input{
+.wrap-input{ 
     width: 100%;
     position: relative;
     border-bottom: 2px solid #adadad;
     margin-bottom: 37px;
 }
 
+.wrap-input.sucess{
+    border-color: rgb(30, 255, 0);
+}
+
+.wrap-input.sucess i.iconeVerdadeiro{
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.wrap-input.error i.iconeFalso{
+    color: red;
+    visibility: visible;
+}
+
+.wrap-input.error{
+    border-color: red;
+}
+
+.wrap-input.error .errorMessage{
+    color: red;
+    font-size: smaller;
+    visibility: visible;
+}
+
 .input{
     font-size: 15px;
-    color: #fff;
+    color: rgb(248, 248, 248);
     line-height: 1.2;
     border: none;
     display: block;
@@ -202,4 +226,24 @@
 
 .txt2:hover{
     color: #fff;
+}
+
+.iconeVerdadeiro {
+    position: absolute;
+    top: 19px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.iconeFalso {
+    position: absolute;
+    top: 19px;
+    right: 10px;
+    visibility: hidden;
+}
+.errorMessage {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
