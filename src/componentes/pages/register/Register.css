@@ -47,40 +47,18 @@
     width: 100px;
 }
 
-.wrap-input{ 
+.form-control{
     width: 100%;
     position: relative;
     border-bottom: 2px solid #adadad;
     margin-bottom: 37px;
 }
 
-.wrap-input.sucess{
-    border-color: rgb(30, 255, 0);
-}
-
-.wrap-input.sucess i.iconeVerdadeiro{
-    color: #2ecc71;
-    visibility: visible;
-}
-
-.wrap-input.error i.iconeFalso{
-    color: red;
-    visibility: visible;
-}
-
-.wrap-input.error{
-    border-color: red;
-}
-
-.wrap-input.error .errorMessage{
-    color: rgb(245, 105, 105);
-    font-size: smaller;
-    visibility: visible;
-}
-
-.input{
+input[type = 'text'],
+input[type = 'email'],
+input[type = 'password'] {
     font-size: 15px;
-    color: rgb(248, 248, 248);
+    color: #fff;
     line-height: 1.2;
     border: none;
     display: block;
@@ -92,7 +70,9 @@
     text-transform: lowercase;
 
     padding: 0 5px;
+    
 }
+
 
 .focus-input{
     position: absolute;
@@ -122,6 +102,7 @@
     
     background-color: var(--main-color);
 }
+
 
 .focus-input::after{
     font-size: 15px;
@@ -161,7 +142,6 @@
 .has-val + .focus-input::before{
     width: 100%;
 }
-
 .container-login-form-btn{
     display: flex;
     flex-wrap: wrap;
@@ -199,51 +179,6 @@
     /* mask-repeat: no-repeat; */
 }
 
-.text-center{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin-top: 50px;
-}
-
-.txt1{
-    font-size: 14px;
-    color: #adadad;
-    line-height: 1.5;
-    padding-right: 5px;
-
-    text-decoration: none;
-}
-
-.txt2{
-    font-size: 14px;
-    color: #c7c41a;
-    line-height: 1.5;
-
-    text-decoration: none;
-}
-
-.txt2:hover{
-    color: #fff;
-}
-
-.iconeVerdadeiro {
-    position: absolute;
-    top: 19px;
-    right: 10px;
-    visibility: hidden;
-}
-
-.iconeFalso {
-    position: absolute;
-    top: 19px;
-    right: 10px;
-    visibility: hidden;
-}
-.errorMessage {
-    visibility: hidden;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+.error {
+    color: red;
 }
