@@ -4,6 +4,8 @@ export const api = axios.create({
     baseURL: process.env.BACKEND_URL || "http://localhost:3333",
 });
 
+console.log("BASEURL: " + api.baseURL);
+
 export const sayHello = async() => {
     const response = await api.get('/hello');
     console.log(response.data);
