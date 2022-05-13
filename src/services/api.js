@@ -1,10 +1,14 @@
 import axios from 'axios';
 
-export const api = axios.create({
-    baseURL: process.env.BACKEND_URL || "http://localhost:3333",
-});
+const getBackendUrl = () => {
+    const REACT_APP_BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:3333"
+    console.log("REACT_APP_BACKEND_URL: " + REACT_APP_BACKEND_URL);
+    return REACT_APP_BACKEND_URL;
+};
 
-console.log("BASEURL: " + api.baseURL);
+export const api = axios.create({
+    baseURL: getBackendUrl(),
+});
 
 export const sayHello = async() => {
     const response = await api.get('/hello');
