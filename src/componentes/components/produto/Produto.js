@@ -1,12 +1,14 @@
 import "./Produto.css";
 import { listProducts } from "../../../services/api.js";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { AuthContext } from '../../../contexts/auth';
 
 import Bee from "../../../assets/images/background_home_pequeno.png";
 
 
 function Produto() {
-    const [products, setVal] = useState();
+    const { authenticated, login } = useContext(AuthContext);
+    const [products, setVal] = useState([]);
 
     const getProducts = async () => {
         const { data } = await listProducts();
