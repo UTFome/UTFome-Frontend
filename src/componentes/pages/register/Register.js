@@ -3,6 +3,7 @@ import './Register.css';
 import logo from '../../../assets/images/Logo_grande.png';
 import { useState, useContext } from 'react';
 import { AuthContext } from '../../../contexts/auth';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
     const { register } = useContext(AuthContext);
@@ -26,7 +27,9 @@ const Register = () => {
                     className='login-form' 
                     onSubmit={handleSubmit}>
                         <span className='login-form-title'>
+                            <Link to="/main">
                             <img src={logo}></img>
+                            </Link>
                         </span>
 
                         <div className='wrap-input'>
@@ -76,9 +79,9 @@ const Register = () => {
                                 Já possui uma conta?
                             </span>
 
-                            <a href='#' className='txt2'>
+                            <Link to = "/login" className='txt2'>
                                 Faça login
-                            </a>
+                            </Link>  
                         </div>
                     </form>
                 </div>

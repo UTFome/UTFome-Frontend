@@ -30,7 +30,7 @@ function Header(){
                 <nav className='navbar'>
                     <Link to="/main">HOME</Link>
                     <Link to="/produtos">PRODUTOS</Link>
-                    <a href='#anunciar'>ANUNCIAR</a>
+                    <Link to="/anunciar">ANUNCIAR</Link>
                     <Link to="/sobre">SOBRE</Link>
                     <Link to="/contato">CONTATO</Link>
                     <Link to="/perfil">PERFIL</Link>
