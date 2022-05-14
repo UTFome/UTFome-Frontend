@@ -41,6 +41,8 @@ const validate = values => {
     }
     if (!values.confirmPassword) {
         errors.confirmPassword = 'Obrigatório'
+    }else if(values.password != values.confirmPassword){
+        errors.confirmPassword = 'As senhas devem ser iguais!'
     }
     return errors
 }
@@ -53,7 +55,12 @@ function Register() {
         validate
     })
 
-    console.log('form errors', formik.touched)
+    const [name] = useState('');
+    const [lastName] = useState('');
+    const [email] = useState('');
+    const [password] = useState('');
+    const [confirmPassword] = useState('');
+
 
     return (
         <div className='container'>
@@ -71,6 +78,8 @@ function Register() {
                         <div className='form-control'>
 
                             <input
+                                placeholder="Digite seu nome"
+                                className={name !== '' ? 'has-val input' : 'input'}
                                 type='text'
                                 id='name'
                                 name='name'
@@ -78,7 +87,7 @@ function Register() {
                                 onBlur={formik.handleBlur}
                                 value={formik.values.name}
                             />
-                            <span className='focus-input' data-placeholder="Nome"></span>
+                            <span className='focus-input'></span>
                             { formik.touched.name && formik.errors.name ? (
                             <div className='error'>{formik.errors.name}
                             </div>) : null}
@@ -87,6 +96,8 @@ function Register() {
                         <div className='form-control'>
 
                             <input
+                                placeholder="Digite seu sobrenome"
+                                className={lastName !== '' ? 'has-val input' : 'input'}
                                 type='text'
                                 id='lastName'
                                 name='lastName'
@@ -94,7 +105,7 @@ function Register() {
                                 onBlur={formik.handleBlur}
                                 value={formik.values.lastName}
                             />
-                            <span className='focus-input' data-placeholder="Sobrenome"></span>
+                            <span className='focus-input'></span>
                             { formik.touched.lastName && formik.errors.lastName ? (
                             <div className='error'>{formik.errors.lastName}
                             </div>) : null}
@@ -103,6 +114,8 @@ function Register() {
                         <div className='form-control'>
 
                             <input
+                                placeholder="Digite seu email institucional"
+                                className={email !== '' ? 'has-val input' : 'input'}
                                 type='email'
                                 id='email'
                                 name='email'
@@ -110,7 +123,7 @@ function Register() {
                                 onBlur={formik.handleBlur}
                                 value={formik.values.email}
                             />
-                            <span className='focus-input' data-placeholder="Email"></span>
+                            <span className='focus-input'></span>
                             {formik.touched.email && formik.errors.email ? (
                             <div className='error'>{formik.errors.email}
                             </div>) : null}
@@ -119,6 +132,8 @@ function Register() {
                         <div className='form-control'>
 
                             <input
+                                placeholder="Digite sua senha"
+                                className={password !== '' ? 'has-val input' : 'input'}
                                 type='password'
                                 id='password'
                                 name='password'
@@ -126,7 +141,7 @@ function Register() {
                                 onBlur={formik.handleBlur}
                                 value={formik.values.password}
                             />
-                            <span className='focus-input' data-placeholder="Senha"></span>
+                            <span className='focus-input'></span>
                             {formik.touched.password && formik.errors.password ? (
                             <div className='error'>{formik.errors.password}
                             </div>) : null}
@@ -135,6 +150,8 @@ function Register() {
                         <div className='form-control'>
 
                             <input
+                                placeholder="confirme sua senha"
+                                className={confirmPassword !== '' ? 'has-val input' : 'input'}
                                 type='password'
                                 id='confirmPassword'
                                 name='confirmPassword'
@@ -142,7 +159,7 @@ function Register() {
                                 onBlur={formik.handleBlur}
                                 value={formik.values.confirmPassword}
                             />
-                            <span className='focus-input' data-placeholder="Confirme sua senha"></span>
+                            <span className='focus-input'></span>
                             {formik.touched.confirmPassword  && formik.errors.confirmPassword ? (
                             <div className='error'>{formik.errors.confirmPassword}
                             </div>) : null}
