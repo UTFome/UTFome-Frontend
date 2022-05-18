@@ -15,7 +15,7 @@ const initialValues = {
     confirmPassword: ''
 }
 const onSubmit = values => {
-    console.log('form data', values)
+    console.log('Dados envidados!', values)
 }
 
 const validate = values => {
