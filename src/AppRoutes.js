@@ -75,8 +75,11 @@ const AppRoutes = () => {
                         </Private>
                     } />
 
-
-
+                    <Route exact path="/produtos" element={
+                        <Private>
+                            <Produto />
+                        </Private>
+                    } />
 
                     {/* ##### APENAS USUARIOS NAO AUTENTICADOS PODEM ACESSAR #####*/}
                     <Route exact path="/login" element={
@@ -92,15 +95,15 @@ const AppRoutes = () => {
                         </PrivateForNoAuth>
                     } />
 
-
-
-
                     {/* ############### ROTAS GERAIS ###############*/}
                     <Route exact path="/contato" element={<Contact />} />
                     <Route exact path="/review" element={<Review />} />
                     <Route exact path="/sobre" element={<About />} />
                     <Route exact path="/main" element={<Main />} />
                     <Route exact path="/" element={<Home />} />
+                    <Route exact path="/register" element={<Register />} />
+                    <Route exact path="/login" element={<Login />} />
+                    <Route exact path="/anunciar" element={<Announce />} />
                     {/* <Route exact path="/main" element={<Main />} /> */}
 
 

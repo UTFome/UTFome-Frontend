@@ -3,6 +3,7 @@ import './Login.css';
 import logo from '../../../assets/images/Logo_grande.png';
 import { useState, useContext } from 'react';
 import { AuthContext } from '../../../contexts/auth';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     const { authenticated, login } = useContext(AuthContext);
@@ -25,7 +26,9 @@ const Login = () => {
                     onSubmit={handleSubmit}>
                         {/* <p>{String(authenticated)}</p> */}
                         <span className='login-form-title'>
-                            <img src={logo}></img>
+                            <Link to="/main">
+                                <img src={logo}></img>
+                            </Link>
                         </span>
 
                         <div className='wrap-input'>
@@ -52,14 +55,26 @@ const Login = () => {
                             </button>
                         </div>
 
+                        <div className='forgotPassword-text'>
+                            <span className='forgotPassword'>
+                                Esqueceu sua senha?
+                            </span>
+
+                            <a href='#' className='recoverAccount-text'>
+                                <li>
+                                    <Link to="/register">Recuperar Conta </Link> 
+                                    {/* Alterar para onde redireciona. Colocar página do "Forgot Password" */}
+                                </li>
+                            </a>
+                        </div>
+
                         <div className='text-center'>
                             <span className='txt1'>
                                 Não possui conta?
                             </span>
-
-                            <a href='#' className='txt2'>
+                            <Link to = "/register" className='txt2'>
                                 Criar conta
-                            </a>
+                            </Link>                        
                         </div>
                     </form>
                 </div>

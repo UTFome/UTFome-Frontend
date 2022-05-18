@@ -1,14 +1,19 @@
 import axios from 'axios';
 
+const getBackendUrl = () => {
+    const REACT_APP_BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:3333"
+    console.log("REACT_APP_BACKEND_URL: " + REACT_APP_BACKEND_URL);
+    return REACT_APP_BACKEND_URL;
+};
+
 export const api = axios.create({
-    baseURL: "http://localhost:3333",
+    baseURL: getBackendUrl(),
 });
 
 export const sayHello = async() => {
     const response = await api.get('/hello');
     console.log(response.data);
 }
-
 
 // ############### SESSIONS ###############
 export const createSession = async (email, senha) => {
@@ -35,5 +40,20 @@ export const createUser = async (nome, sobrenome, email, senha) => {
         return response;
     }catch(err){
         console.log("Erro ao criar usuário");
+    }
+}
+
+// ############### PRODUCTS ###############
+export const listProducts = async () => {
+    try{
+        const accessToken = localStorage.getItem("token");
+        console.log(`the token: ${accessToken}`)
+        return api.get('/produtos', {
+            headers: {
+              'Authorization': `token ${accessToken}`
+            }
+          });
+    }catch(err){
+        console.error("Erro ao listar produtos: ", err);
     }
 }

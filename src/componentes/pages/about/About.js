@@ -66,7 +66,7 @@ function About(){
 
                 <div className='pessoa'>
                     <img src={reginaldo} alt=''/>
-                    <h3>reginaldo gregorio neto</h3>
+                    <h3>reginaldo gregório de souza neto</h3>
                     <h4>estudante de ciência da computação - UTFPR</h4>
                 </div>
 
