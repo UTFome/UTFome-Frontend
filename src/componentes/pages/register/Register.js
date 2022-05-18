@@ -4,90 +4,179 @@ import logo from '../../../assets/images/Logo_grande.png';
 import { useState, useContext } from 'react';
 import { AuthContext } from '../../../contexts/auth';
 import { Link } from 'react-router-dom';
+import { useFormik } from 'formik';
 
-const Register = () => {
-    const { register } = useContext(AuthContext);
 
-    const [name, setName] = useState('');
-    const [lastName, setLastName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+const initialValues = {
+    name: '',
+    lastName: '',
+    email: '',
+    password: '',
+    confirmPassword: ''
+}
+const onSubmit = values => {
+    console.log('Dados envidados!', values)
+}
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log("Submitted", { name, lastName, email, password });
-        register(name, lastName, email, password);
+const validate = values => {
+
+
+    let errors = {
+
     }
+
+    if (!values.name) {
+        errors.name = 'Obrigatório!'
+    }
+    if (!values.lastName) {
+        errors.lastName = 'Obrigatório!'
+    }
+    if (!values.email) {
+        errors.email = 'Obrigatório!'
+    }else if(!/^[A-Z0-9._%+-]+@[utfpr.edu.]+\.[B-R]{2,4}$/i.test(values.email)){
+        errors.email = 'email inválido! (utilize seu email institucional)'
+    }
+    if (!values.password) {
+        errors.password = 'Obrigatório!'
+    }
+    if (!values.confirmPassword) {
+        errors.confirmPassword = 'Obrigatório'
+    }else if(values.password != values.confirmPassword){
+        errors.confirmPassword = 'As senhas devem ser iguais!'
+    }
+    return errors
+}
+
+
+function Register() {
+    const formik = useFormik({
+        initialValues,
+        onSubmit,
+        validate
+    })
+
+    const [name] = useState('');
+    const [lastName] = useState('');
+    const [email] = useState('');
+    const [password] = useState('');
+    const [confirmPassword] = useState('');
+
 
     return (
         <div className='container'>
             <div className='container-login'>
                 <div className='wrap-register'>
-                    <form 
-                    className='login-form' 
-                    onSubmit={handleSubmit}>
+                    <form
+                        className='login-form'
+                        onSubmit={formik.handleSubmit}>
                         <span className='login-form-title'>
                             <Link to="/main">
-                            <img src={logo}></img>
+                                <img src={logo}></img>
                             </Link>
                         </span>
 
-                        <div className='wrap-input'>
-                            <input 
-                            className={name !== '' ? 'has-val input' : 'input'}
-                            type="text"
-                            value={name}
-                            onChange={e => setName(e.target.value)} />
-                            <span className='focus-input' data-placeholder="Nome"></span>
-                        </div>
+                        <div className='form-control'>
 
-                        <div className='wrap-input'>
                             <input
-                            className={lastName !== '' ? 'has-val input' : 'input'}
-                            type="text"
-                            value={lastName}
-                            onChange={e => setLastName(e.target.value)} />
-                            <span className='focus-input' data-placeholder="Sobrenome"></span>
+                                placeholder="Digite seu nome"
+                                className={name !== '' ? 'has-val input' : 'input'}
+                                type='text'
+                                id='name'
+                                name='name'
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                value={formik.values.name}
+                            />
+                            <span className='focus-input'></span>
+                            { formik.touched.name && formik.errors.name ? (
+                            <div className='error'>{formik.errors.name}
+                            </div>) : null}
                         </div>
 
-                        <div className='wrap-input'>
-                            <input 
-                            className={email !== '' ? 'has-val input' : 'input'}
-                            type="email"
-                            value={email}
-                            onChange={e => setEmail(e.target.value)} />
-                            <span className='focus-input' data-placeholder="Email"></span>
+                        <div className='form-control'>
+
+                            <input
+                                placeholder="Digite seu sobrenome"
+                                className={lastName !== '' ? 'has-val input' : 'input'}
+                                type='text'
+                                id='lastName'
+                                name='lastName'
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                value={formik.values.lastName}
+                            />
+                            <span className='focus-input'></span>
+                            { formik.touched.lastName && formik.errors.lastName ? (
+                            <div className='error'>{formik.errors.lastName}
+                            </div>) : null}
                         </div>
 
-                        <div className='wrap-input'>
-                            <input 
-                            className={password !== '' ? 'has-val input' : 'input'} 
-                            type="password"
-                            value={password}
-                            onChange={e => setPassword(e.target.value)} />
-                            <span className='focus-input' data-placeholder="Password"></span>
+                        <div className='form-control'>
+
+                            <input
+                                placeholder="Digite seu email institucional"
+                                className={email !== '' ? 'has-val input' : 'input'}
+                                type='email'
+                                id='email'
+                                name='email'
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                value={formik.values.email}
+                            />
+                            <span className='focus-input'></span>
+                            {formik.touched.email && formik.errors.email ? (
+                            <div className='error'>{formik.errors.email}
+                            </div>) : null}
                         </div>
 
-                        <div className='container-login-form-btn'>
-                            <button className='login-form-btn'>
-                                Cadastre-se
-                            </button>
+                        <div className='form-control'>
+
+                            <input
+                                placeholder="Digite sua senha"
+                                className={password !== '' ? 'has-val input' : 'input'}
+                                type='password'
+                                id='password'
+                                name='password'
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                value={formik.values.password}
+                            />
+                            <span className='focus-input'></span>
+                            {formik.touched.password && formik.errors.password ? (
+                            <div className='error'>{formik.errors.password}
+                            </div>) : null}
                         </div>
 
-                        <div className='text-center'>
-                            <span className='txt1'>
-                                Já possui uma conta?
-                            </span>
+                        <div className='form-control'>
 
-                            <Link to = "/login" className='txt2'>
-                                Faça login
-                            </Link>  
+                            <input
+                                placeholder="confirme sua senha"
+                                className={confirmPassword !== '' ? 'has-val input' : 'input'}
+                                type='password'
+                                id='confirmPassword'
+                                name='confirmPassword'
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                value={formik.values.confirmPassword}
+                            />
+                            <span className='focus-input'></span>
+                            {formik.touched.confirmPassword  && formik.errors.confirmPassword ? (
+                            <div className='error'>{formik.errors.confirmPassword}
+                            </div>) : null}
                         </div>
+
+
+                        <button className='login-form-btn'
+                            type='submit'>              
+                            Cadastre-se
+                        </button>
                     </form>
                 </div>
             </div>
         </div>
     )
+
 }
+
 
 export default Register;
