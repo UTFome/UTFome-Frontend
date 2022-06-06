@@ -5,26 +5,27 @@
     font-size: 1.2em;
 }
 
-.home{
+.home-main {
     min-height: 100vh;
     display: flex;
     align-items: center;
     background:url(../../../assets/images/about-breno.jpg) no-repeat;
     background-size: cover;
     background-position: center;
+    margin-bottom: 5%;
 }
 
-.home .content{
+.home-main .content {
     max-width: 60rem;
 }
 
-.home .content h3{
+.home-main .content h3{
     font-size: 6rem;
     text-transform: uppercase;
     color:#fff;
 }
 
-.home .content p{
+.home-main .content p {
     font-size: 2rem;
     font-weight: lighter;
     line-height: 1.8;
@@ -36,6 +37,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap:1.5rem;
+    margin-bottom: 5%;
 }
 
 .menu .box-container .box{
@@ -79,11 +81,12 @@
     width: 5rem;
     line-height: 5rem;
     font-size: 2rem;
-    border:var(--border);
-    color:#fff;
+    border: var(--border);
+    border-color:var(--main-color);
+    color:var(--main-color);
     margin:.3rem;
 }
 
 .icons a:hover{
-    background:var(--main-color);
+    background:#000;
 }
