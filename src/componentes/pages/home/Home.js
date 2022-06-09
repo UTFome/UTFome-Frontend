@@ -19,7 +19,9 @@ function Home(){
                 <img src={bee} className="bee" alt=''/>
                 <img src={logo} className="logo"/>
             </div>
+            <div className='home-entrar'>
              <Link to="/main" className='btn botao-entrar'>Bee  Happy </Link> 
+            </div>
         </section>
     );
 

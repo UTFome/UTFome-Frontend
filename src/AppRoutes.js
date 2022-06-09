@@ -20,7 +20,7 @@ import Profile from './componentes/pages/profile/Profile';
 
 import { AuthProvider, AuthContext } from './contexts/auth';
 import Register from './componentes/pages/register/Register';
-import Main from './componentes/pages/main/main';
+import Main from './componentes/pages/main/Main';
 
 const AppRoutes = () => {
 
