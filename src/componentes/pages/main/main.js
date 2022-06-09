@@ -2,7 +2,7 @@ import React from 'react';
 import './Main.css';
 import Header from '../../layout/header/Header';
 import Footer from '../../layout/footer/Footer';
-import Review from '../../pages/review/Review';
+import Review from '../review/Review';
 import Produto1 from '../../../assets/images/bee_redondo_pequeno.png';
 import Produto2 from '../../../assets/images/bee_redondo_pequeno.png';
 import Produto3 from '../../../assets/images/bee_redondo_pequeno.png';
