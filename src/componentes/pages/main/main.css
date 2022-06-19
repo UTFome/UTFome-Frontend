@@ -9,7 +9,7 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background:url(../../../assets/images/about-breno.jpg) no-repeat;
+    background:url(../../../assets/images/comida3.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     margin-bottom: 5%;
@@ -31,6 +31,7 @@
     line-height: 1.8;
     padding:1rem 0;
     color:#eee;
+    text-transform: none;
 }
 
 .menu .box-container{

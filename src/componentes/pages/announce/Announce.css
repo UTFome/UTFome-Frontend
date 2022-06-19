@@ -1,0 +1,156 @@
+.container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-announce{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: #111;
+
+    background:url(../../../assets/images/comida2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 5%;
+}
+
+.wrap-register{
+    width: 450px;
+    background-color: #333;
+    border-radius: 10px;
+
+    overflow: hidden;
+    padding: 5% 3% 3%;
+
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.announce-form{
+    width: 100%;
+}
+
+.announce-form-title{
+    display: block;
+    font-size: 30px;
+    color: azure;
+    padding-bottom: 3%;
+    line-height: 1.2;
+    text-align: center;
+}
+h3{
+    text-align: center;
+    color: #fff;
+    font-size: 1.8rem;
+    text-transform: none;
+}
+
+.announce-form-title img{
+    width: 100px;
+}
+
+.form-control-announce{
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin-bottom: 37px;
+}
+.text-label{
+    font-size: 1.5rem;
+    color: #000;
+}
+
+ .input{
+    font-size: 15px;
+    height: 20px;
+    color: #fff;
+    border: none;
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    text-transform: none;
+    
+    
+}
+
+
+.focus-input::after{
+    font-size: 15px;
+    color: #999999;
+    line-height: 1.2;
+
+    content: attr(data-placeholder);
+
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    padding-left: 5px;
+
+}
+
+.input:focus{
+    outline: none;
+}
+
+.input:focus + .focus-input::after{
+    top: -10px;
+}
+
+.input:focus + .focus-input::before{
+    width: 100%;
+}
+
+.has-val + .focus-input::after{
+    top: -10px;
+}
+
+.has-val + .focus-input::before{
+    width: 100%;
+}
+
+.container-announce-form-btn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 13px;
+}
+
+.announce-form-btn{
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    color: #503739;
+
+    line-height: 1.2;
+
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 50px;
+
+    background-color: var(--main-color);
+
+}
+
+.announce-form-btn:hover{
+    cursor: pointer;
+    background-color: #503739;
+    color: #fff;
+    /* background : url(../../../assets/images/hover_botao.png); */
+    /* mask-repeat: no-repeat; */
+}
+
+.error {
+    color: red;
+}

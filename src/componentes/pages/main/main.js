@@ -16,13 +16,13 @@ function Main(){
 
             <section className='home-main' id="home">
                 <div className='content'>
-                    <h3>fresh bee in the morning</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat labore, sint cupiditate distinctio tempora reiciendis.</p>
+                    <h3>Qual será a sua escolha de hoje?</h3>
+                    <p>Você não precisa ir longe e nem esperar horas por uma comida, escolha uma opção pertinho de você</p>
                 </div>
             </section>
 
             <section className="menu" id="menu">
-                <h1 className="heading"> our <span>menu</span> </h1>
+                <h1 className="heading"> <span>destaques</span> </h1>
 
                 <div className="box-container">
 

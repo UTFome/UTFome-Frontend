@@ -50,7 +50,7 @@ const AppRoutes = () => {
 
         if (authenticated) {
             return (
-                <Navigate to="/perfil" />
+                {/* <Navigate to="/perfil" /> */}
             );
         }
 
@@ -64,15 +64,15 @@ const AppRoutes = () => {
 
                     {/* ##### APENAS USUARIOS AUTENTICADOS PODEM ACESSAR #####*/}
                     <Route exact path="/anunciar" element={
-                        <Private>
+                       /*  <Private>
+                        </Private> */
                             <Announce />
-                        </Private>
                     } />
 
                     <Route exact path="/perfil" element={
-                        <Private>
-                            <Profile />
-                        </Private>
+                        <Profile />
+                       /*  <Private></Private> */
+                        
                     } />
 
                     <Route exact path="/produtos" element={

@@ -7,11 +7,8 @@ import { Link } from 'react-router-dom';
 
 function meuEvento(){
     console.log("deu bom")
-   
 
 }
-
-
 function Home(){
     return (
         <section className="home" id="home">
