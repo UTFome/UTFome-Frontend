@@ -16,25 +16,11 @@ function Contact(){
 
 
                     <form action="">
-                        <h3>entre em contato</h3>
-                        <div className="inputBox">
-                            <span className="fas fa-user"></span>
-                            <input type="text" placeholder="nome"/>
-                        </div>
+                        <h3>Email para contato</h3>
                         <div className="inputBox">
                             <span className="fas fa-envelope"></span>
-                            <input type="email" placeholder="email"/>
+                            <input type="email" placeholder="utfome@gmail.com.br"/>
                         </div>
-                        <div className="inputBox">
-                            <span className="fas fa-phone"></span>
-                            <input type="number" placeholder="telefone"/>
-                        </div>
-                        {/* area da mensagem */}
-                        <div className="inputBox">
-                            <span className="fas fa-pencil-alt"></span>
-                            <textarea name="" id="" cols="30" rows="10" placeholder="mensagem"></textarea>
-                        </div>
-                        <input type="submit" value="enviar" className="btn"/>
                     </form>
 
                 </div>

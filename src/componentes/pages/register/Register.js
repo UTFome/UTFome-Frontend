@@ -150,7 +150,7 @@ function Register() {
                         <div className='form-control'>
 
                             <input
-                                placeholder="confirme sua senha"
+                                placeholder="Confirme sua senha"
                                 className={confirmPassword !== '' ? 'has-val input' : 'input'}
                                 type='password'
                                 id='confirmPassword'

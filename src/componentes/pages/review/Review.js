@@ -1,14 +1,26 @@
-import "./Review.css";
-import Bee from "../../../assets/images/bee_redondo_pequeno.png";
-import Aspas from "../../../assets/images/aspas_pequena.png";
+// import "./Review.css";
+// import Bee from "../../../assets/images/bee_redondo_pequeno.png";
+// import Aspas from "../../../assets/images/aspas_pequena.png";
+import Header from "../../layout/header/Header";
+import Footer from "../../layout/footer/Footer";
+import Avaliacao from "../../components/produto/avaliacao/Avaliacao";
 
 
 function Review() {
     return(
-        <section className="review" id="review">
-            <h1 className="heading">  <span> Avaliações </span> </h1>
+        <div className="container">
+            <Header></Header>
+            
+            <section className="review-avaliacao">
+                <h1 className="heading">  <span> Avaliações </span> </h1>
+                
+                <div className="review-avaliacoes">
+                    <Avaliacao></Avaliacao>
+                    <Avaliacao></Avaliacao>
+                    <Avaliacao></Avaliacao>
+                </div>
 
-<div className="box-container">
+{/* <div className="box-container">
     <div className="box">
         <div className="aspas">
         <img src={Aspas} />
@@ -52,8 +64,11 @@ function Review() {
             <i className="fas fa-star"></i>
         </div>
     </div>
-</div>
-        </section>
+</div> */}
+            </section>
+            
+            <Footer></Footer>
+        </div>
     );
 }
 

@@ -1,4 +1,5 @@
 .home{
+    /* background:url(../../../assets/images/background_home_pequeno.png) no-repeat; */
     background-color: var(--main-color);
     min-height: 100vh;
     align-items: center;
@@ -16,20 +17,25 @@
     height: 100%;
 }
 
+.home .home-entrar {
+    margin-top: 5%;
+}
+
 .home .logos .bee{
-    width: 30rem;
+    width: 18rem;
 }
 
 .home .logos .logo{
-    width: 512px;
+    width: 380px;
 }
 
 .botao-entrar{
     background-color: var(--brown);
-    font-size: 3rem;
+    font-size: 2rem;
     margin-top: 7rem;
     font-family: 'Inter', sans-serif;
     letter-spacing: 1rem;
+    height: 5rem;
 }
 
 .botao-entrar:hover{

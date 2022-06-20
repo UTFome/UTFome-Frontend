@@ -1,7 +1,8 @@
-.review .box-container{
+/* .review .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap:1.5rem;
+    margin-bottom: 5%;
 }
 
 .review .box-container .box{
@@ -37,4 +38,9 @@
 
 .review .box img {
     width: 15%;
+} */
+
+.review-avaliacoes {
+    display: flex;
+    gap: 15px;
 }

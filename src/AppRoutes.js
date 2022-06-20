@@ -20,7 +20,7 @@ import Profile from './componentes/pages/profile/Profile';
 
 import { AuthProvider, AuthContext } from './contexts/auth';
 import Register from './componentes/pages/register/Register';
-import Main from './componentes/pages/main/main';
+import Main from './componentes/pages/main/Main';
 
 const AppRoutes = () => {
 
@@ -50,7 +50,7 @@ const AppRoutes = () => {
 
         if (authenticated) {
             return (
-                <Navigate to="/perfil" />
+                {/* <Navigate to="/perfil" /> */}
             );
         }
 
@@ -64,21 +64,21 @@ const AppRoutes = () => {
 
                     {/* ##### APENAS USUARIOS AUTENTICADOS PODEM ACESSAR #####*/}
                     <Route exact path="/anunciar" element={
-                        <Private>
+                       /*  <Private>
+                        </Private> */
                             <Announce />
-                        </Private>
                     } />
 
                     <Route exact path="/perfil" element={
-                        <Private>
-                            <Profile />
-                        </Private>
+                        <Profile />
+                       /*  <Private></Private> */
+                        
                     } />
 
                     <Route exact path="/produtos" element={
-                        <Private>
                             <Produto />
-                        </Private>
+                        /* <Private>
+                        </Private> */
                     } />
 
                     {/* ##### APENAS USUARIOS NAO AUTENTICADOS PODEM ACESSAR #####*/}

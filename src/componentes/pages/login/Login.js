@@ -62,7 +62,7 @@ const Login = () => {
 
                             <a href='#' className='recoverAccount-text'>
                                 <li>
-                                    <Link to="/register">Recuperar Conta </Link> 
+                                    <Link to="/register">Recuperar conta </Link> 
                                     {/* Alterar para onde redireciona. Colocar página do "Forgot Password" */}
                                 </li>
                             </a>

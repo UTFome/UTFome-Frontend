@@ -7,11 +7,8 @@ import { Link } from 'react-router-dom';
 
 function meuEvento(){
     console.log("deu bom")
-   
 
 }
-
-
 function Home(){
     return (
         <section className="home" id="home">
@@ -19,7 +16,9 @@ function Home(){
                 <img src={bee} className="bee" alt=''/>
                 <img src={logo} className="logo"/>
             </div>
+            <div className='home-entrar'>
              <Link to="/main" className='btn botao-entrar'>Bee  Happy </Link> 
+            </div>
         </section>
     );
 
