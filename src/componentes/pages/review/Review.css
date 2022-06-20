@@ -1,4 +1,4 @@
-.review .box-container{
+/* .review .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap:1.5rem;
@@ -38,4 +38,8 @@
 
 .review .box img {
     width: 15%;
+} */
+
+.review-avaliacao .review-avaliacoes {
+    display: flex !important;
 }
