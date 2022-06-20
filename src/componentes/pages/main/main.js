@@ -8,6 +8,7 @@ import Produto2 from '../../../assets/images/bee_redondo_pequeno.png';
 import Produto3 from '../../../assets/images/bee_redondo_pequeno.png';
 import Modal from 'react-modal';
 import { useState } from 'react';
+import Detalhe from '../../components/produto/Detalhe';
 
 Modal.setAppElement('#root')
 
@@ -51,9 +52,8 @@ function Main(){
                         <div className="price">$15.99 <span>20.99</span></div>
                         <div class="icons">
                             <button class="modal-button fas fa-eye a" onClick={handleOpenModal} ></button>
-                            <Modal isOpen={modalIsOpen} onRequestClose={handleCloseModal}>
-                            <h2> AQUI VAI O CONTEUDO DE CADA PRODUTO! </h2>
-                            <button onClick={handleCloseModal}> Fechar </button>
+                            <Modal isOpen={modalIsOpen} onRequestClose={handleCloseModal} >
+                            <Detalhe></Detalhe>
                             </Modal>
                         </div>
                     </div>
@@ -64,6 +64,9 @@ function Main(){
                         <div className="price">$15.99 <span>20.99</span></div>
                         <div class="icons">
                             <button href="#" class="fas fa-eye a" ></button>
+                            <Modal isOpen={modalIsOpen} onRequestClose={handleCloseModal}>
+                            <Detalhe></Detalhe>
+                            </Modal>
                         </div>
                     </div>
 
@@ -73,6 +76,9 @@ function Main(){
                         <div className="price">$15.99 <span>20.99</span></div>
                         <div class="icons">
                         <button href="#" class="fas fa-eye a" ></button>
+                        <Modal isOpen={modalIsOpen} onRequestClose={handleCloseModal}>
+                            <Detalhe></Detalhe>
+                            </Modal>
                         </div>
                     </div>
 
@@ -82,6 +88,10 @@ function Main(){
                         <div className="price">$15.99 <span>20.99</span></div>
                         <div class="icons">
                             <button href="#" class="fas fa-eye a" ></button>
+                            <Modal isOpen={modalIsOpen} onRequestClose={handleCloseModal}>
+                            <Detalhe></Detalhe>
+                            </Modal>
+                            
                         </div>
                     </div>
 
@@ -91,6 +101,9 @@ function Main(){
                         <div className="price">$15.99 <span>20.99</span></div>
                         <div class="icons">
                             <button href="#" class="fas fa-eye a" ></button>
+                            <Modal isOpen={modalIsOpen} onRequestClose={handleCloseModal}>
+                            <Detalhe></Detalhe>
+                            </Modal>
                         </div>
                     </div>
 
@@ -100,6 +113,9 @@ function Main(){
                         <div className="price">$15.99 <span>20.99</span></div>
                         <div class="icons">
                             <button href="#" class="fas fa-eye a" ></button>
+                            <Modal isOpen={modalIsOpen} onRequestClose={handleCloseModal}>
+                            <Detalhe></Detalhe>
+                            </Modal>
                         </div>
                     </div>
 
