@@ -4,6 +4,7 @@ import React, { useEffect, useState, useContext } from "react";
 import { AuthContext } from '../../../contexts/auth';
 
 import Bee from "../../../assets/images/background_home_pequeno.png";
+import Header from "../../layout/header/Header";
 
 
 function Produto() {

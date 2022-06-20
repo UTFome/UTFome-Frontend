@@ -23,7 +23,7 @@ function Header(){
     return (
             <header className='header'>
 
-                <a href='#' className='logo'>
+                <a href='/' className='logo'>
                     <img src={logo}></img>
                 </a>
 
@@ -33,6 +33,7 @@ function Header(){
                     <Link to="/anunciar">ANUNCIAR</Link>
                     <Link to="/sobre">SOBRE</Link>
                     <Link to="/contato">CONTATO</Link>
+                    <Link to="/review">AVALIAÇÕES</Link>
                     <Link to="/perfil">PERFIL</Link>
                 </nav>
 

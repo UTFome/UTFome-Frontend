@@ -76,9 +76,9 @@ const AppRoutes = () => {
                     } />
 
                     <Route exact path="/produtos" element={
-                        <Private>
                             <Produto />
-                        </Private>
+                        /* <Private>
+                        </Private> */
                     } />
 
                     {/* ##### APENAS USUARIOS NAO AUTENTICADOS PODEM ACESSAR #####*/}
