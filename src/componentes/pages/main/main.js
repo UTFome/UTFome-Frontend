@@ -9,11 +9,20 @@ import Produto3 from '../../../assets/images/bee_redondo_pequeno.png';
 import ProdutoModal1 from '../../../assets/images/comida2.jpg';
 import Modal from 'react-modal';
 import { useState } from 'react';
+import { listProducts } from '../../../services/api';
 
 Modal.setAppElement('#root')
 
 function Main(){
     const[modalIsOpen, setIsOpen] = useState(false)
+    const [products, setVal] = useState([]);
+    
+    const getProducts = async () => {
+        const { data } = await listProducts();
+        console.log(data)
+        setVal(data);
+    };
+
     function handleOpenModal(){
         setIsOpen(true)
     }
@@ -29,6 +38,7 @@ function Main(){
 
         }
     }
+    // const renderProduct = (product) => {
     return(
         <div className='container'>
 
@@ -42,31 +52,27 @@ function Main(){
             </section>
 
             <section className="menu" id="menu">
-                <h1 className="heading"> our <span>menu</span> </h1>
-
                 <div className="box-container">
 
                     <div className="box">
                         <img src={Produto1}></img>
                         <h3>tasty and healty</h3>
-                        <div className="price">$15.99 <span>20.99</span></div>
+                        <div className="price">R$ 15.99</div>
                         <div className="icons">
                             <button className="modal-button fas fa-eye a" onClick={handleOpenModal} ></button>
-                            <Modal isOpen={modalIsOpen} onRequestClose={handleCloseModal}>
+                            <Modal className="modal-produto" isOpen={modalIsOpen} onRequestClose={handleCloseModal}>
                                 <div className="modal-topo">
-                                    <button onClick={handleCloseModal}> x </button>
-                                    {/* <h2> DESCRIÇÃO DO PRODUTO </h2> */}
+                                    <button className="modal-fechar" onClick={handleCloseModal}> x </button>
                                     <div className="blogs" id="blogs">
-                                        <h1 className="heading"> our <span>DESCRIÇÃO DO PRODUTO</span> </h1>
+                                        <h1 className="heading modal-titulo">  <span>DESCRIÇÃO DO PRODUTO</span> </h1>
                                         <div className="box-container">
                                             <div className="box">
                                                 <div className="image">
                                                     <img src={ProdutoModal1}></img>
                                                 </div>
                                                 <div className="content">
-                                                    <a href="#" className="title">tasty and refreshing coffee</a>
-                                                    <span>by admin / 21st may, 2021</span>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dicta.</p>
+                                                    <a className="title">Bee Happy</a>
+                                                    {/* <p>{product.descricao}Bombom muito gostoso.</p> */}
                                                 </div>
                                             </div>
                                         </div>
@@ -122,17 +128,11 @@ function Main(){
                     </div>
 
                 </div>
-
+                {/* { products.map(renderProduct) } */}
                 </section>
-
-                <Review></Review>
-
-                <Footer className='header-main'></Footer>
-
+            <Review></Review>
         </div>
-
-
-    )
-
+    );
+    // }
 }
 export default Main;

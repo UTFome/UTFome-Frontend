@@ -5,6 +5,7 @@ import { AuthContext } from '../../../contexts/auth';
 
 import Bee from "../../../assets/images/background_home_pequeno.png";
 import Header from "../../layout/header/Header";
+import Footer from "../../layout/footer/Footer";
 
 
 function Produto() {
@@ -34,11 +35,15 @@ function Produto() {
     useEffect(() => { getProducts() }, []);    
 
     return(
-        <section className="blogs" id="blogs">
-            <h1 className="heading"> Produtos <span>Disponíveis</span> </h1>         
+        <div className="container">
+            <Header></Header>
+            <section className="blogs" id="blogs">
+                <h1 className="heading"> Produtos <span>Disponíveis</span> </h1>         
 
-            { products.map(renderProduct) }
-        </section>
+                { products.map(renderProduct) }
+            </section>
+            <Footer></Footer>
+        </div>
     );
 }
 
