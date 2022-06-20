@@ -11,7 +11,7 @@ function Review() {
         <div className="container">
             <Header></Header>
             
-            <section className="review-avaliacao" id="review">
+            <section className="review-avaliacao">
                 <h1 className="heading">  <span> Avaliações </span> </h1>
                 
                 <div className="review-avaliacoes">
