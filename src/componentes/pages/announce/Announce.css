@@ -63,7 +63,10 @@ h3{
     font-size: 1.5rem;
     color: #fff;
 }
+.input[type = 'text']{
+    height: 20px;
 
+}
  .input{
     font-size: 15px;
     height: 20px;
