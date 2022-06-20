@@ -20,11 +20,13 @@ function Footer() {
           </div> 
 
           <div className="links">
-            <a href="#">home</a>
-            <a href="#">sobre</a>
-            <a href="#">menu</a>
-            <a href="#">produtos</a>
-            <a href="#">avaliações</a>
+            <a href="/main">Home</a>
+            <a href="/produtos">Produtos</a>
+            <a href="/anunciar">Anunciar</a>
+            <a href="/sobre">Sobre</a>
+            <a href="/contato">Contato</a>
+            <a href="/review">Avaliações</a>
+            <a href="/perfil">Perfil</a>
           </div>        
         </div>
 
