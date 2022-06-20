@@ -18,6 +18,7 @@ function Profile(){
     
     return (
         <>
+          <Header className='header-main'></Header>
             <p>{String(authenticated)}</p>
             <h1>USUÁRIO BEE</h1>
             <h2>HOME</h2>
@@ -25,7 +26,7 @@ function Profile(){
             <h2>PRODUTOS</h2>
             <h2>CONFIGURAÇÕES</h2>
             <button className='logout-botao' onClick={handleLogout}>LOGOUT</button>
-            
+            <Footer className='header-main'></Footer> 
         </>
     )
 }
