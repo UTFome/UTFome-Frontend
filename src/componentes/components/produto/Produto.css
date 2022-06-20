@@ -20,7 +20,7 @@
     width: 100%;
 }
 
-.blogs .box-container .box:hover .image img{
+.blogs .box-container .box .image:hover img{
     transform: scale(1.2);
 }
 
