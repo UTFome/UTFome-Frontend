@@ -23,10 +23,8 @@ function About(){
                     </div>
 
                     <div className="content">
-                        <h3>O que te deixa feliz?</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus qui ea ullam, enim tempora ipsum fuga alias quae ratione a officiis id temporibus autem? Quod nemo facilis cupiditate. Ex, vel?</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit amet enim quod veritatis, nihil voluptas culpa! Neque consectetur obcaecati sapiente?</p>
-                        <a href="#" className="btn">leia mais</a>
+                        <h3>Pensado para você</h3>
+                        <p className="sobre">Esse site é fruto de um projeto criado na disciplina de Programação de Aplicativo do curso de Ciência da Computação. Nosso objetivo é ajudar aos alunos que vendem comida no ambiente da UTFPR, sabemos o quanto a divulgação influencia nas vendas e, por isso, queremos proporcionar a vocês uma plataforma específica de divulgação. Todos os alimentos que estão à venda na faculdade em um só lugar!</p>
                     </div>
 
                 </div>
