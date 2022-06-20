@@ -32,6 +32,7 @@ function Produto() {
 
     useEffect(() => { getProducts() }, []);    
 
+
     return(
         <section className="blogs" id="blogs">
             <h1 className="heading"> Produtos <span>Disponíveis</span> </h1>         

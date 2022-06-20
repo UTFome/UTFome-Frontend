@@ -66,9 +66,8 @@ function Announce() {
                                 <img src={logo}></img>
                             </Link>
                         </span>
-                        <h3>Anuncie seu produto</h3>
                         <div className='form-control-announce'>
-                            <label className='text-label'>Nome:</label>
+                            <label className='text-label'>Nome do produto:</label>
                             <input
                                 placeholder=""
                                 className={nome !== '' ? 'has-val input' : 'input'}
