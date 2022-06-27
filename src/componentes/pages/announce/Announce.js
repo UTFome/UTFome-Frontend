@@ -67,10 +67,9 @@ function Announce() {
                             </Link>
                         </span>
                         <h3>Anuncie seu produto</h3>
-                        <div className='form-control-announce'>
-                            <label className='text-label'>Nome:</label>
+                        <div className='form-control'>
                             <input
-                                placeholder=""
+                                placeholder="Nome do produto"
                                 className={nome !== '' ? 'has-val input' : 'input'}
                                 type='text'
                                 id='nome'
@@ -80,15 +79,13 @@ function Announce() {
                                 value={formik.values.nome}
                                 />
                             <span className='focus-input'></span>
-                            { formik.touched.nome && formik.errors.nome ? (
+                            {formik.touched.nome && formik.errors.nome ? (
                                 <div className='error'>{formik.errors.nome}
                             </div>) : null}
                         </div>
-
                         <div className='form-control'>
-                            <label className='text-label'>Categoria:</label>
                             <input
-                                placeholder="ex: salgado"
+                                placeholder="Categoria"
                                 className={categoria !== '' ? 'has-val input' : 'input'}
                                 type='text'
                                 id='categoria'
@@ -96,17 +93,15 @@ function Announce() {
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
                                 value={formik.values.categoria}
-                            />
+                                />
                             <span className='focus-input'></span>
-                            { formik.touched.categoria && formik.errors.categoria ? (
+                            {formik.touched.categoria && formik.errors.categoria ? (
                                 <div className='error'>{formik.errors.categoria}
                             </div>) : null}
                         </div>
-
                         <div className='form-control'>
-                            <label className='text-label'>Valor:</label>
                             <input
-                                placeholder=""
+                                placeholder="Valor do produto"
                                 className={valor !== '' ? 'has-val input' : 'input'}
                                 type='number'
                                 id='valor'
@@ -122,9 +117,8 @@ function Announce() {
                         </div>
 
                         <div className='form-control'>
-                            <label className='text-label'>Descrição:</label>
                             <textarea
-                                placeholder="descreva o produto"
+                                placeholder="Descrição do produto"
                                 className={descricao !== '' ? 'has-val input' : 'input'}
                                 type='text'
                                 id='descricao'
@@ -138,6 +132,8 @@ function Announce() {
                                 <div className='error'>{formik.errors.descricao}
                             </div>) : null}
                         </div>
+
+                       
 
                         <button className='announce-form-btn'
                             type='submit'>              

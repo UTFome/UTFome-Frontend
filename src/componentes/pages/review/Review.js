@@ -9,7 +9,7 @@ import Avaliacao from "../../components/produto/avaliacao/Avaliacao";
 function Review() {
     return(
         <div className="container">
-            <Header></Header>
+            {/* <Header></Header> */}
             
             <section className="review-avaliacao">
                 <h1 className="heading">  <span> Avaliações </span> </h1>
