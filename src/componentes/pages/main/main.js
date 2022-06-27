@@ -44,10 +44,9 @@ function Main() {
 
       <section className="home-main" id="home">
         <div className="content">
-          <h3>Qual será a sua escolha?</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
-            labore, sint cupiditate distinctio tempora reiciendis.
+          <h3 className="titulo">Qual será a sua escolha?</h3>
+          <p className="subtitulo">
+          Você não precisa ir longe e nem esperar horas por uma comida, escolha uma opção pertinho de você
           </p>
         </div>
       </section>
