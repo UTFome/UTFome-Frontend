@@ -12,7 +12,7 @@ import { useState } from "react";
 import { listProducts } from "../../../services/api";
 
 Modal.setAppElement("#root");
-
+ 
 function Main() {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [products, setVal] = useState([]);
