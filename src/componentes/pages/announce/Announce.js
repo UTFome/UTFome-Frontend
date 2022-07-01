@@ -108,7 +108,7 @@ function Announce() {
                                 name='valor'
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
-                                value={formik.values.valor}
+                                value={formik.values.valor} 
                             />
                             <span className='focus-input'></span>
                             {formik.touched.email && formik.errors.email ? (
