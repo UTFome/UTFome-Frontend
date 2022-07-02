@@ -25,7 +25,6 @@ function Footer() {
             <a href="/anunciar">Anunciar</a>
             <a href="/sobre">Sobre</a>
             <a href="/contato">Contato</a>
-            <a href="/review">Avaliações</a>
             <a href="/perfil">Perfil</a>
           </div>        
         </div>
