@@ -92,8 +92,12 @@ export default styled.div {
     cursor: pointer;
 }
 
+.icons .modal-button {
+    background-color: #000;
+}
+
 .icons .a:hover{
-    background:#000;
+    background:#513538;
 }
 
 .menu .box .icons .modal-topo h2{

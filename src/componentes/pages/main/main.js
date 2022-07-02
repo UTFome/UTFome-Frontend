@@ -191,7 +191,7 @@ function Main() {
             </div>
             {/* { products.map(renderProduct) } */}
         </section>
-        {/*  <Review></Review>  */}
+         <Review></Review> 
         <Footer></Footer>
         </div>
     );
