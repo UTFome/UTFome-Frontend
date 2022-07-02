@@ -37,7 +37,6 @@ function Header(){
                     <Link to="/anunciar">ANUNCIAR</Link>
                     <Link to="/sobre">SOBRE</Link>
                     <Link to="/contato">CONTATO</Link>
-                    <Link to="/review">AVALIAÇÕES</Link>
                     <Link to="/perfil">PERFIL</Link>
                 </nav>
 

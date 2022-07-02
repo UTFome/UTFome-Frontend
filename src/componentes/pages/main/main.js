@@ -176,7 +176,8 @@ function Main() {
         </div>
         {/* { products.map(renderProduct) } */}
       </section>
-      {/*  <Review></Review>  */}
+       <Review></Review> 
+       {/* <Avaliacao></Avaliacao> */}
       <Footer></Footer>
     </div>
   );

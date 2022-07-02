@@ -1,5 +1,6 @@
 .contact{
-    margin-top: 10rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
 }
 
 .contact .row{
@@ -13,6 +14,7 @@
     flex:1 1 45rem;
     width: 100%;
     object-fit: cover;
+    height: 45rem;
 }
 
 .contact .row form{
@@ -59,4 +61,8 @@
     color:#fff;
     text-transform: none;
     background:none;
+}
+
+.contact .row form .input .descricao{
+    height: 20rem;
 }
