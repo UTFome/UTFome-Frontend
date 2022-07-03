@@ -46,12 +46,7 @@ export const createUser = async (nome, sobrenome, email, senha) => {
 // ############### PRODUCTS ###############
 export const listProducts = async () => {
     try{
-        const accessToken = localStorage.getItem("token");
-        return api.get('/produtos', {
-            headers: {
-              'Authorization': `token ${accessToken}`
-            }
-          });
+        return api.get('/produtos');
     }catch(err){
         console.error("Erro ao listar produtos: ", err);
     }
