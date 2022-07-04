@@ -51,3 +51,17 @@ export const listProducts = async () => {
         console.error("Erro ao listar produtos: ", err);
     }
 }
+
+export const createProduct = async (usuarioId, { nome, descricao, preco, quantidade }) => {
+    try{
+        const response = api.post(`/produtos/${usuarioId}`, {
+            nome,
+            descricao,
+            preco,
+            quantidade
+        });
+        return response;
+    }catch(err){
+        console.log("Erro ao criar produto");
+    }
+}

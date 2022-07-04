@@ -4,22 +4,19 @@ import Footer from '../../layout/footer/Footer';
 import Header from '../../layout/header/Header';
 import './Announce.css';
 import logo from '../../../assets/images/Logo_grande.png';
+import { AuthContext } from '../../../contexts/auth';
 import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { useFormik } from 'formik';
 
-
 const initialValues = {
     nome: '',
-    valor: '',
     descricao: '',
-    categoria: '',
-}
-const onSubmit = values => {
-    console.log('Dados envidados!', values)
+    preco: '',
+    quantidade: ''
 }
 
-const validate = values => {
+const validateOnBlur = values => {
 
 
     let errors = {
@@ -29,30 +26,43 @@ const validate = values => {
     if (!values.nome) {
         errors.nome = 'Obrigatório!'
     }
-    if (!values.lastName) {
-        errors.lastName = 'Obrigatório!'
-    }
-    
     if (!values.descricao) {
-        errors.password = 'Obrigatório!'
+        errors.descricao = 'Obrigatório!'
     }
     
+    if (!values.preco) {
+        errors.preco = 'Obrigatório!'
+    }
+    
+    if (!values.quantidade) {
+        errors.quantidade = 'Obrigatório!'
+    }
+
     return errors
 }
 
 
 function Announce() {
+    const { createProductAndRedirect } = useContext(AuthContext);
+
+    const onSubmit = values => {
+        console.log('Submetendo dados...')
+        console.log(AuthContext.user)
+        createProductAndRedirect(AuthContext.user.id, values);
+        console.log('Dados envidados!', values)
+        return false;
+    }
+
     const formik = useFormik({
         initialValues,
         onSubmit,
-        validate
+        validateOnBlur
     })
 
     const [nome] = useState('');
-    const [valor] = useState('');
     const [descricao] = useState('');
-    const [categoria] = useState('');
-
+    const [preco] = useState('');
+    const [quantidade] = useState('');
 
     return (
         <div className='container'>
@@ -60,7 +70,9 @@ function Announce() {
                 <div className='wrap-register'>
                     <form
                         className='announce-form'
-                        onSubmit={formik.handleSubmit}>
+                        onSubmit={formik.handleSubmit}
+                        method="post"
+                        >
                         <span className='announce-form-title'>
                             <Link to="/main">
                                 <img src={logo}></img>
@@ -85,30 +97,30 @@ function Announce() {
                         </div>
                         <div className='form-control'>
                             <input
-                                placeholder="Categoria"
-                                className={categoria !== '' ? 'has-val input' : 'input'}
-                                type='text'
-                                id='categoria'
-                                name='categoria'
+                                placeholder="Quantidade"
+                                className={quantidade !== '' ? 'has-val input' : 'input'}
+                                type='number'
+                                id='quantidade'
+                                name='quantidade'
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
-                                value={formik.values.categoria}
+                                value={formik.values.quantidade}
                                 />
                             <span className='focus-input'></span>
-                            {formik.touched.categoria && formik.errors.categoria ? (
-                                <div className='error'>{formik.errors.categoria}
+                            {formik.touched.categoria && formik.errors.quantidade ? (
+                                <div className='error'>{formik.errors.quantidade}
                             </div>) : null}
                         </div>
                         <div className='form-control'>
                             <input
-                                placeholder="Valor do produto"
-                                className={valor !== '' ? 'has-val input' : 'input'}
+                                placeholder="Preço do produto"
+                                className={preco !== '' ? 'has-val input' : 'input'}
                                 type='number'
-                                id='valor'
-                                name='valor'
+                                id='preco'
+                                name='preco'
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
-                                value={formik.values.valor}
+                                value={formik.values.preco}
                             />
                             <span className='focus-input'></span>
                             {formik.touched.email && formik.errors.email ? (
