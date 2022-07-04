@@ -14,7 +14,7 @@ import ReactElasticCarousel from "react-elastic-carousel";
 import Item from "../../components/produto/item/Item";
 
 Modal.setAppElement("#root");
-
+ 
 function Main() {
     const [modalIsOpen, setIsOpen] = useState(false);
     const [products, setVal] = useState([]);
