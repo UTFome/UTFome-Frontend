@@ -13,6 +13,10 @@
 .header .logo img{
     height: 6rem;
 }
+.logout-botao{
+    background-color: #000;
+    color: #fff;
+}
 
 .header .navbar a{
     margin:0 1rem;

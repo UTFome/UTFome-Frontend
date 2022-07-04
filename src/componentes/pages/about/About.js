@@ -14,7 +14,7 @@ function About(){
         <>  
             <Header />
             <section className="about" id="about">
-                <h1 className="heading"> <span>about</span> us </h1>
+                <h1 className="heading"> <span>sobre</span> nós </h1>
 
                 <div className="row">
 

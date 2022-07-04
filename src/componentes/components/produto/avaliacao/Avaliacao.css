@@ -39,3 +39,8 @@
 .review .box img {
     width: 15%;
 }
+
+.review {
+    display: flex;
+    gap: 2%;
+}
