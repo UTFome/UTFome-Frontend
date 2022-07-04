@@ -47,7 +47,6 @@ export const createUser = async (nome, sobrenome, email, senha) => {
 export const listProducts = async () => {
     try{
         const accessToken = localStorage.getItem("token");
-        console.log(`the token: ${accessToken}`)
         return api.get('/produtos', {
             headers: {
               'Authorization': `token ${accessToken}`
