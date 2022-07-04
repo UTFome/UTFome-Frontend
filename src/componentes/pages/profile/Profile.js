@@ -7,7 +7,9 @@ import reginaldo from "../../../assets/images/about-reginaldo.jpg";
 import ProdutoModal1 from "../../../assets/images/comida2.jpg";
 import React, { useContext } from "react";
 import { AuthContext } from "../../../contexts/auth";
-import { IconName } from "react-icons/md";
+import { BiBlock } from "react-icons/bi";
+import { BsCheckLg } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function Profile() {
   const { authenticated, logout } = useContext(AuthContext);
@@ -16,6 +18,7 @@ function Profile() {
     logout();
   };
 
+  
   return (
     <>
       <div className="teste">
@@ -31,9 +34,9 @@ function Profile() {
         <div className="box-container">
           <div className="box">
             <button
-                className="modal-button fas fa-eye a botaofechar IoIosCloseCircleOutline"
-                //onClick={handleOpenModal}
-            ></button>
+                className="modal-button a botaofechar"
+                //onClick={this.handleClick}
+            ><BiBlock/></button>
             {/* quero usar esse icone como botao de remover produtos IoIosCloseCircleOutline */}
             <img src={Produto1}></img>
             <h3>tasty and healty</h3>
@@ -48,9 +51,9 @@ function Profile() {
           </div>
           <div className="box">
           <button
-                className="modal-button fas fa-eye a botaofechar"
+                className="modal-button a botaofechar"
                 //onClick={handleOpenModal}
-              ></button>
+              ><BsCheckLg/></button>
             <img src={Produto1}></img>
             <h3>tasty and healty</h3>
             <div className="price">R$ 15.99</div>
@@ -63,10 +66,9 @@ function Profile() {
             </div>
           </div>
           <div className="box">
-          <button
-                className="modal-button fas fa-eye a botaofechar"
+          <button className="modal-button a botaofechar"
                 //onClick={handleOpenModal}
-              ></button>
+              ><BsCheckLg/></button>
             <img src={Produto1}></img>
             <h3>tasty and healty</h3>
             <div className="price">R$ 15.99</div>
