@@ -8,7 +8,11 @@ import { Link } from 'react-router-dom';
 
 function Header(){
 
-    const { authenticated } = useContext(AuthContext);
+  const handleLogout = () => {
+    logout();
+  };
+
+    const { authenticated, logout } = useContext(AuthContext);
 
     function openMenu(){
         let navbar = document.querySelector('.navbar');
@@ -33,7 +37,6 @@ function Header(){
                     <Link to="/anunciar">ANUNCIAR</Link>
                     <Link to="/sobre">SOBRE</Link>
                     <Link to="/contato">CONTATO</Link>
-                    <Link to="/review">AVALIAÇÕES</Link>
                     <Link to="/perfil">PERFIL</Link>
                 </nav>
 
@@ -42,6 +45,12 @@ function Header(){
                         <FaBars />
                     </div>
                 </div>
+               {/*  <button className="logout-botao" onClick={handleLogout}>
+                     LOGOUT
+                </button> */}
+                <Link to="/login" className="login-botao"  >
+                     ENTRE
+                </Link>
 
             </header>
     );

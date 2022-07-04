@@ -9,3 +9,36 @@ h2 {
 .logout-botao {
     font-size: 2rem;
 }
+.teste{
+    background-color: #000;
+}
+.banner-perfil{
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    background:url(../../../assets/images/comida3.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 5%;
+}
+.botaofechar{
+    top: -40%;
+    position: relative;
+    right: 35%;
+}
+.foto-perfil{
+    text-align: center;
+    position: relative;
+    margin-top: -10%;
+}
+.nome-perfil{
+    color: #fff;
+    font-size: 3rem;
+}
+.foto{
+    position: relative;
+    width: 10%;
+    align-items: center;
+    border-radius: 80px;
+    
+}
